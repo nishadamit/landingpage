@@ -17,8 +17,8 @@ const LandingHeader = ({setDrawer,visibleDrawer}) =>{
                                     <a href="#aboutus"><li>About Us</li></a>
                                     <a href="#contactus"><li>Contact Us</li></a>
                                     <a href="#ourteam"><li>Our Team</li></a>
-                                    <Link to="/"><li><Button shape="round">Login</Button></li></Link>
-                                    <Link to="/"><li><Button shape="round">Sign Up for free!</Button></li></Link>
+                                    <Link ><li><Button shape="round">Login</Button></li></Link>
+                                    <Link ><li><Button shape="round">Sign Up for free!</Button></li></Link>
                         </HeaderMenuWrapper>
                 
                </div>
