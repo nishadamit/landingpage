@@ -50,11 +50,15 @@ const HeaderWrapper = styled(Header)`
            padding: 20px 170px;
            height: 100px;
            @media (max-width: 768px) {
-                 padding: 20px 40px;
+                 padding: 20px 14px;
            } 
 `;
 const ImageWrapper = styled.img`
            width: 120px;
+           @media (max-width: 768px) {
+                width: 106px;
+                height: 33px;
+           } 
            
 `
 const HeaderMenuWrapper = styled.ul`
@@ -89,6 +93,8 @@ const HeaderMenuWrapper = styled.ul`
                 a li{
                     color: #ffffff;
                     margin-bottom: 10px;
+                    font-size: 19px;
+                    line-height: 32px;
                 }
            }
 `

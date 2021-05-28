@@ -34,7 +34,7 @@ const TeamData = [
 const OurTeam = () =>{
     return(
         <OurTeamWrapper id="ourteam">
-            <Row>
+            <MainRowWrapper2>
                 <ColWrapper lg={{offset:3,span:18}}>
                         <OurTeamHeading>Our Team</OurTeamHeading>
                         <Row>
@@ -58,7 +58,7 @@ const OurTeam = () =>{
                         </RowWrapper>
                 </ColWrapper>
                 
-            </Row>
+            </MainRowWrapper2>
              
         </OurTeamWrapper>
     )
@@ -67,7 +67,11 @@ const OurTeam = () =>{
 const MainRowWrapper = styled(Row)`
        border: 2px solid #00000040;
 `
-
+const MainRowWrapper2 = styled(Row)`
+    @media(max-width:576px){
+        margin: 0px 5px;
+    }
+`
 const OurTeamWrapper = styled(Content)`
        background-color: #ffffff;
        color: #1e2841;
@@ -78,6 +82,10 @@ const ColWrapper  = styled(Col)`
          margin-top: 40px;
          margin-bottom: 40px;
          padding: 25px;
+         @media(max-width:576px){
+            padding: 15px;
+            margin-bottom: 10px;
+         }
 `
 const ColWrapper2  = styled(Col)`
          text-align: center;
