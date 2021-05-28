@@ -26,10 +26,10 @@ const LandingHeader = () =>{
                                 <a onClick={() =>SetLink('aboutus')}><li>About Us</li></a>
                                 <a onClick={() =>SetLink('contactus')}><li>Contact Us</li></a>
                                 <a onClick={() =>SetLink('ourteam')}><li>Our Team</li></a>
-                                <MobileLink href="#contactus"><li>Log In</li></MobileLink>
-                                <MobileLink href="#ourteam"><li>Sign Up</li></MobileLink>
-                                <ButtonLink ><li><Button shape="round">Login</Button></li></ButtonLink>
-                                <ButtonLink ><li><Button shape="round">Sign Up for free!</Button></li></ButtonLink>
+                                <MobileLink href="https://www.pilot-genxchange.tk/signin"><li>Log In</li></MobileLink>
+                                <MobileLink href="https://www.pilot-genxchange.tk/signup"><li>Sign Up</li></MobileLink>
+                                <ButtonLink ><li><Button shape="round" href="https://www.pilot-genxchange.tk/signin">Login</Button></li></ButtonLink>
+                                <ButtonLink ><li><Button shape="round" href="https://www.pilot-genxchange.tk/signup">Sign Up for free!</Button></li></ButtonLink>
                     </HeaderMenuWrapper>
                     <Overlay visible={sideBarValue} onClick={() =>setSideBar(false)} />
                </div>

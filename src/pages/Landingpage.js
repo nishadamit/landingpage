@@ -1,5 +1,4 @@
 import React,{ useState } from 'react';
-import styled from 'styled-components';
 import { Layout} from 'antd';
 import LandingHeader from '../components/Landingpage/Header';
 import LandingPageContent from '../components/Landingpage/Content';
@@ -9,6 +8,7 @@ import OurTeam from '../components/Landingpage/Ourteam';
 import ContactUs from '../components/Landingpage/ContactUs';
 import TermsAndCondition from '../components/Landingpage/TermsAndCondition';
 import PrivacyPolicy from '../components/Landingpage/PrivacyAndPolicy';
+import Chart from '../components/Landingpage/Chart'
 
 const Landingpage = () =>{
 
@@ -30,6 +30,7 @@ const Landingpage = () =>{
            <Layout className="layout">
                 <LandingHeader/>
                 <LandingPageContent />
+                <Chart />
                 <AboutUs />
                 <OurTeam/>
                 <ContactUs />
@@ -45,7 +46,6 @@ const Landingpage = () =>{
                          modalIsOpen={values.privacy}
                          setPrivacyModal={setPrivacyModal}
                 />
-                {/* <Overlay /> */}
            </Layout>
        )
 }
