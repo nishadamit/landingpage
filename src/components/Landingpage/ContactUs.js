@@ -9,17 +9,11 @@ const {   Content, } = Layout;
 
 const ContactUs = () =>{
 
-    const layout = {
-        labelCol: { span: 8 },
-        wrapperCol: { span: 16 },
-      };
-
       return(
           <Content id="contactus">
               <WrapperRow>
                   <Col span={24}>
                        <Heading>Contact Us</Heading>
-                       <Heading2>Feel free to drop us a line below</Heading2>
                   </Col>
               </WrapperRow>
               <FormRowWrapper>
@@ -120,10 +114,6 @@ const Heading = styled.h1`
           margin-bottom: 0px;
           font-size: 30px;
 `
-const Heading2 = styled.p`
-          color: #ffffff;
-          text-align: center;
-`
 const FormRowWrapper = styled(Row)`
           /* margin-top: 50px; */
           background-color:  #1e2841;
@@ -141,6 +131,9 @@ const List = styled.ul`
        }
        li span{
            margin-left: 10px;
+       }
+       @media(max-width:576px){
+           padding: 0px;
        }
 `
 

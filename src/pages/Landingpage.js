@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
+import styled from 'styled-components';
 import { Layout} from 'antd';
 import LandingHeader from '../components/Landingpage/Header';
 import LandingPageContent from '../components/Landingpage/Content';
 import LandingFooter from '../components/Landingpage/LandingPageFooter';
-import Drawer from '../components/Landingpage/Drawer';
 import AboutUs from '../components/Landingpage/AboutUs';
 import OurTeam from '../components/Landingpage/Ourteam';
 import ContactUs from '../components/Landingpage/ContactUs';
@@ -13,7 +13,6 @@ import PrivacyPolicy from '../components/Landingpage/PrivacyAndPolicy';
 const Landingpage = () =>{
 
        const [ values ,setValues ] = useState({
-                drawer:false,
                 terms:false,
                 privacy:false
        })
@@ -29,16 +28,8 @@ const Landingpage = () =>{
 
        return(
            <Layout className="layout">
-                <LandingHeader
-                      setDrawer={setValues}
-                      visibleDrawer={values.drawer} 
-                />
+                <LandingHeader/>
                 <LandingPageContent />
-                
-                <Drawer
-                     setDrawer={setValues}
-                     visibleDrawer={values.drawer} 
-                />
                 <AboutUs />
                 <OurTeam/>
                 <ContactUs />
@@ -54,8 +45,11 @@ const Landingpage = () =>{
                          modalIsOpen={values.privacy}
                          setPrivacyModal={setPrivacyModal}
                 />
+                {/* <Overlay /> */}
            </Layout>
        )
 }
+
+
 
 export default Landingpage

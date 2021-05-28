@@ -20,7 +20,7 @@ const  PrivacyAndPolicy = ({modalIsOpen,setPrivacyModal}) => {
             style={customStyles}
         >
             <div className="terms-modal-header">
-                    <h3>PLEASE READ AND ACCEPT</h3>
+                    <h3>PRIVACY AND POLICY</h3>
                     <ImCross
                         onClick={() =>setPrivacyModal(false)}
                     />

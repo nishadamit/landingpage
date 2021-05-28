@@ -37,6 +37,12 @@ const StyledCard = styled(Card)`
        .ant-card-body {
             height: 121px;
         }
+        @media(max-width:576px){
+            .ant-card-body {
+                height: 70px;
+                padding: 10px;
+            }
+        }
 `
 
 export default OurteamCard

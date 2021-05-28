@@ -48,12 +48,12 @@ const OurTeam = () =>{
                                         <ImageWrapper src={TeamData[0].image} />
                                         <Heading3>Raj Kundan <br /> Chief Executive Officer / Co-Founder</Heading3>
                                  </ColWrapper2>
-                                 <Col lg={{span:20,offset:2}} sm={{span:24}} xs={{span:24}}>
+                                 <ColWrapper3 lg={{span:24}} sm={{span:24}} xs={{span:24}}>
                                         <p>Kaigen – Kaizen:改善 Generation:世代 is our way of starting a Technical Community that believes Kaizen philosophy from heart. Change is the only Constant. And by following Kaizen, working towards making smaller changes for good, we want to achieve our bigger goal of “Winning the Hearts” of our customers and eventually everyone in this world through our support, innovation, and passion.</p>
                                         <p>Kaizen provides world class Technical services along with carefully chosen bouquet of Products from its Partner Network in the field of Automation, Network, Cloud, AI and Blockchain.  We have developed a close knitted multinational network of collaborators across Japan, India, Singapore, Europe and Malaysia with a wide range of skillset of more than 350+ Engineers operating from different geographies.</p>
                                         <p>With an emphasis on Diversity, we encourage all our employees  to create new values while shining toward their dreams, goals and lead a happy life. We will continue to strive to provide our services that will aim to create a new future which can be useful to all of you and to be loved.</p>
                                         <Heading2>We will continue to "challenge" for a new Change.</Heading2>
-                                 </Col>
+                                 </ColWrapper3>
                              </MainRowWrapper>
                         </RowWrapper>
                 </ColWrapper>
@@ -82,6 +82,9 @@ const ColWrapper  = styled(Col)`
 const ColWrapper2  = styled(Col)`
          text-align: center;
 `
+const ColWrapper3  = styled(Col)`
+         padding: 0px 12px;
+`
 const OurTeamHeading = styled.h1`
          color: #1e2841;
          position: absolute;
@@ -95,6 +98,12 @@ const Heading = styled.h1`
          text-align: center;
          position: absolute;
          margin-top: 25px;
+
+         @media(max-width:576px){
+            text-align: center;
+            margin-top: 0px;
+            position: relative;
+        }
 `
 const Heading2 = styled.h1`
          font-size: 20px;
@@ -106,6 +115,9 @@ const Heading3 = styled.p`
          color: #1e2841;
          font-size: 18px;
          font-weight: 500;
+         @media(max-width:576px){
+            font-size: 16px;
+        }
 `
 const RowWrapper = styled(Row)`
       margin-top: 35px;

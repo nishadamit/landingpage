@@ -39,6 +39,12 @@ const StyledFooter = styled(Footer)`
         text-align: center;
         background-color: #37435f;
         color: #ffffff;
+
+        @media(max-width:576px){
+            padding: 0px;
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
 `
 const ListStyle = styled.ul`
       display: flex;
@@ -49,6 +55,12 @@ const ListStyle = styled.ul`
       a{
           color: #ffffff;
       }
+      @media(max-width:576px){
+          padding: 0px;
+        li{
+          margin-left: 9px;
+         }
+        }
 `
 const Heading = styled.h4`
         color: #ffffff;
@@ -57,6 +69,12 @@ const ListStyle2 = styled.div`
         a{
             color: #ffffff;
             margin-left: 5px;
+        }
+        @media(max-width:576px){
+            a{
+            color: #ffffff;
+            margin-left: 20px;
+            }
         }
 `
 

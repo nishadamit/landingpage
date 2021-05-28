@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import { Layout,Button} from 'antd';
 import styled from 'styled-components';
 import {  Link } from "react-router-dom";
@@ -6,26 +6,37 @@ import { MenuOutlined } from '@ant-design/icons';
 import Logo from '../../assests/images/kaigen-logo.png'
 const { Header,} = Layout;
 
-const LandingHeader = ({setDrawer,visibleDrawer}) =>{
+const LandingHeader = () =>{
+      
+      const [ sideBarValue ,setSideBar ] =  useState(false)
+
+
+      const SetLink = (pathname) =>{
+            setSideBar(false)
+           window.location.href=`#${pathname}`;        
+      }
+
       return(
           <HeaderWrapper>
                <div>
                    <ImageWrapper src={Logo} />
                </div>
                <div>
-                        <HeaderMenuWrapper>
-                                    <a href="#aboutus"><li>About Us</li></a>
-                                    <a href="#contactus"><li>Contact Us</li></a>
-                                    <a href="#ourteam"><li>Our Team</li></a>
-                                    <Link ><li><Button shape="round">Login</Button></li></Link>
-                                    <Link ><li><Button shape="round">Sign Up for free!</Button></li></Link>
-                        </HeaderMenuWrapper>
-                
+                    <HeaderMenuWrapper visible={sideBarValue}>
+                                <a onClick={() =>SetLink('aboutus')}><li>About Us</li></a>
+                                <a onClick={() =>SetLink('contactus')}><li>Contact Us</li></a>
+                                <a onClick={() =>SetLink('ourteam')}><li>Our Team</li></a>
+                                <MobileLink href="#contactus"><li>Log In</li></MobileLink>
+                                <MobileLink href="#ourteam"><li>Sign Up</li></MobileLink>
+                                <ButtonLink ><li><Button shape="round">Login</Button></li></ButtonLink>
+                                <ButtonLink ><li><Button shape="round">Sign Up for free!</Button></li></ButtonLink>
+                    </HeaderMenuWrapper>
+                    <Overlay visible={sideBarValue} onClick={() =>setSideBar(false)} />
                </div>
-               <IconContainer onClick={() =>setDrawer(!visibleDrawer)}>
+               <IconContainer onClick={() =>setSideBar(true)}>
                    <HamburgurIcon />
                </IconContainer>
-          </HeaderWrapper>
+        </HeaderWrapper>
       )
 }
 
@@ -60,9 +71,26 @@ const HeaderMenuWrapper = styled.ul`
                 margin-right: 25px;
                 color: #ffffff;
             }
-            @media (max-width: 576px) {
-                 display: none;
-           } 
+            @media(max-width:576px){
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: -9px;
+                height: 100vh;
+                background-color: #1e2841;
+                z-index: 5;
+                justify-content: center;
+                right: 0;
+                padding: 23px;
+                display: block;
+                transform: ${props =>(props.visible ? 'translateX(0)' :'translateX(100%)')};
+                opacity: ${props =>(props.visible ? '1' :'0')};
+                transition: all ease 0.5s;
+                a li{
+                    color: #ffffff;
+                    margin-bottom: 10px;
+                }
+           }
 `
 const IconContainer = styled.div`
     @media (min-width: 576px) {
@@ -73,5 +101,28 @@ const IconContainer = styled.div`
 const HamburgurIcon = styled(MenuOutlined)`
        font-size: 25px;
 `
-
+const ButtonLink = styled.a`
+         @media (max-width: 576px) {
+            display: none;
+    } 
+`
+const MobileLink= styled.a`
+      @media (min-width: 576px) {
+            display: none;
+      }  
+`
+const Overlay = styled.div`
+         @media (max-width: 576px) {
+            height: 100vh;
+            width: 100vw;
+            background-color: #00000096;
+            z-index: 3;
+            position: fixed;
+            left: 0;
+            top: 0;
+            opacity: ${props =>(props.visible ? '1' :'0')};
+            pointer-events: ${props =>(props.visible ? 'all' :'none')};
+            transition: all ease 0.5s;
+         } 
+`
 export default LandingHeader

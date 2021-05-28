@@ -17,10 +17,10 @@ const LandingPageContent = () =>{
       return(
           <Content>
                 <ContentRow color="#1e2841" padding="55px">
-                    <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
+                    <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22}} xs={{span:22,offset:1}}>
                             <LandingTabs/>
                     </Col>
-                    <Col lg={{span:11,offset:2}}  md={{span:12,offset:1}} sm={{span:20,offset:4}} xs={{span:20,offset:4}}>
+                    <Col lg={{span:11,offset:2}}  md={{span:12,offset:1}} sm={{span:20,offset:2}} xs={{span:20,offset:2}}>
                         <Header2right >
                              <div>
                                   <Heading>Virtual Currency on</Heading>
