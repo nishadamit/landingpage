@@ -9,12 +9,11 @@ const {   Content, } = Layout;
 const AboutUs = () =>{
 
      const Details = [
-         {id:1,name:'NAME',value:'改元株式会社 / Kaigen K.K.'},
+         {id:1,name:'NAME',value:'KaigenX'},
          {id:2,name:'ESTABLISHED',value:'September 2017'},
-         {id:3,name:'CAPITAL',value:'7,500,000 YEN'},
-         {id:4,name:'HEAD OFFICE',value:'105-0023 1-2-2 Seavans A Mall, 2F, Mandir, Shibaura Minato-ku, Tokyo'},
-         {id:5,name:'TELEPHONE',value:'070-1481-9881'},
-         {id:6,name:'FAX',value:'03-3455-2994'},
+         {id:4,name:'OFFICE',value:'Unit-4, Madhuban Complex, Lane No-5, Above Canara Bank, Koregaon Park Pune 411001, Maharashtra, India'},
+         {id:5,name:'TELEPHONE',value:'+91 70-3078-6279'},
+        //  {id:6,name:'FAX',value:'03-3455-2994'},
          {id:7,name:'OFFICERS',value:'SAHIL SOI - President RAJ KUNDAN - Managing Director'},
          {id:8,name:'BUSINESS',value:'Automation, IT Consulting, System Operations and Maintenance Onsite-Offshore System Development, Staff Augmentation Artificial Intelligence, Machine Learning and Blockchain based development'},
          {id:9,name:'AFFILIATION',value:'Computer Software Association of Japan (CSAJ) Microsoft Partner Network'},
