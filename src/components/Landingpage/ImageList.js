@@ -38,7 +38,7 @@ const ImageList = (props) =>{
                                 description="No fees on Bitcoin-FX trades"
                             />
                                 <Checklistparagraph
-                                description="No fees on INR deposits through SBI Sumishin Net Bank"
+                                 description="No fees on INR deposits through SBI Sumishin Net Bank to HDFC Bank"
                             />
                         </Col>
                         :

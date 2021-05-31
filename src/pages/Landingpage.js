@@ -8,7 +8,8 @@ import OurTeam from '../components/Landingpage/Ourteam';
 import ContactUs from '../components/Landingpage/ContactUs';
 import TermsAndCondition from '../components/Landingpage/TermsAndCondition';
 import PrivacyPolicy from '../components/Landingpage/PrivacyAndPolicy';
-import Chart from '../components/Landingpage/Chart'
+import Chart from '../components/Landingpage/Chart';
+import Map from '../components/Landingpage/Map'
 
 const Landingpage = () =>{
 

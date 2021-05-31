@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout,Row,Col,Form, Input, InputNumber, Button} from 'antd';
+import { Layout,Row,Col,Form, Input, InputNumber, Button,Checkbox} from 'antd';
+import Map from './Map'
 import styled from 'styled-components';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail,MdLocationOn } from "react-icons/md";
@@ -66,12 +67,41 @@ const ContactUs = () =>{
                             <Row>
                                 <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
                                     <Form.Item 
+                                      name="companyname" 
+                                    >
+                                        <Input
+                                            placeholder="Company Name"
+                                        />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
+                                    <Form.Item 
                                        name="message"
                                        rules={[{ required: true, message: 'Please type your message!' }]}
                                     >
                                         <Input.TextArea
                                             placeholder="Message"
                                         />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
+                                    <Form.Item >
+                                        <StyledCheckbox>
+                                        I agree to the terms & conditions
+                                        </StyledCheckbox>
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
+                                    <Form.Item >
+                                        <StyledCheckbox>
+                                        I want to subscribe to Kaigen newsletter for new offers, launches and industry insights.
+                                        </StyledCheckbox>
                                     </Form.Item>
                                 </Col>
                             </Row>
@@ -84,18 +114,30 @@ const ContactUs = () =>{
                                     </Form.Item>
                                 </Col>
                             </Row>
-
                         </Form>
                     </Col>
                     <Col lg={{span:8 ,offset:1}}  sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                         <Heading3>Contact Details</Heading3>
                         <List>
-                            <li>Contrary to popular belief, Lorem Ipsum is not simply random text  Contrary to popular belief, Lorem Ipsum is not simply random text</li>
-                            <li><MdLocationOn size="1.7em" /> <span> B-164 , Sector-64 ,Noida UP </span></li>
-                            <li><FaPhoneAlt size="1.2em" /> <span> +91 9999999999 </span></li>
-                            <li><MdEmail size="1.4em" /> <span> kaigen@gamil.com </span></li>
-                            
+                            <li><Heading4>Corporate Offices:</Heading4></li>
+                            <li> <Heading5>JAPAN</Heading5></li>
+                            <li> <span>105-0023</span></li>
+                            <li> <span>1-2-2 Seavans A Mall, 2F, Mandir,</span></li>
+                            <li> <span>Shibaura Minato-ku, Tokyo</span></li>
+                            <li> <span>Phone - +81 70-1481-9881</span></li>
+                            <br />
+                            <li> <Heading5>INDIA</Heading5></li>
+                            <li> <span>Unit-4, Madhuban Complex, Lane No-5, Above</span></li>
+                            <li> <span>Canara Bank, Koregaon Park Pune 411001,</span></li>
+                            <li> <span>Maharashtra, India</span></li>
+                            <li> <span>Phone - +91 70-3078-6279</span></li>
+                            <br />
+                            <li> <Heading5>Mail</Heading5></li>
+                            <li> <span>info@kaigengroup.com</span></li>
+                            <li> <span>sales@kaigengroup.com</span></li>
+                            <Map />
                         </List>
+                       
                     </Col>
               </FormRowWrapper>
           </Content>
@@ -122,19 +164,31 @@ const FormRowWrapper = styled(Row)`
 const Heading3 = styled.h1`
           color: #ffffff;
 `
+const Heading4 = styled.h1`
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 700;
+`
+
+const Heading5 = styled.h1`
+          color: #ffffff;
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 0px;
+`
 const List = styled.ul`
        li{
            list-style: none;
            display: flex;
            align-items: center;
-           margin-bottom: 5px;
-       }
-       li span{
-           margin-left: 10px;
        }
        @media(max-width:576px){
            padding: 0px;
        }
+`
+
+const StyledCheckbox = styled(Checkbox)`
+        color: #ffffff;
 `
 
 

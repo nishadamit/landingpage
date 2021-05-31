@@ -6,8 +6,8 @@ import kaigen from '../../assests/images/kaigen.png'
 import GooglePlay from '../../assests/images/googleplay.png';
 import AppStore from '../../assests/images/appstore.png';
 import LandingImage1 from '../../assests/images/LandingImage1.png';
-import LandingImage2 from '../../assests/images/LandingImage2.png';
-import LandingImage3 from '../../assests/images/LandingImage3.png';
+import LandingImage2 from '../../assests/images/LandingImage2.png'     ;
+import LandingImage3 from '../../assests/images/LandingImage3.jpeg';
 import ImageList from './ImageList'
 import LandingTabs from './Tabs';
 const {   Content, } = Layout;
