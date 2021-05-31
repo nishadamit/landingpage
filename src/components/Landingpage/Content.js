@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout,Row,Col,} from 'antd';
 import styled from 'styled-components';
+import LandingHeader from './Header';
 import BackgroundImage from '../../assests/images/mainbackground.jpg';
 import kaigen from '../../assests/images/kaigen.png'
 import GooglePlay from '../../assests/images/googleplay.png';
@@ -17,6 +18,7 @@ const LandingPageContent = () =>{
       return(
           <Content>
                 <ContentRow color="#1e2841" padding="55px">
+                    <LandingHeader />
                     <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22}} xs={{span:22,offset:1}}>
                             <LandingTabs/>
                     </Col>
@@ -61,14 +63,11 @@ const LandingPageContent = () =>{
 
 
 const ContentRow = styled(Row)`
-        background-color: ${props =>props.color};
-
-        @media (min-width: 768px) {
-                 padding-top: 55px;
-           } 
-           @media (max-width: 576px) {
-                 padding-top: 25px;
-           } 
+        background-image:url(${BackgroundImage});
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
  `
  const ContentRow2 = styled.div`
         padding-top: 70px;
@@ -76,11 +75,11 @@ const ContentRow = styled(Row)`
 `
 
 const Header2right = styled.div`
-            background-image:url(${BackgroundImage});
-            background-repeat: no-repeat;
+            
+            
             height: 350px;
             background-position: 62%;
-            background-size: contain;
+            
 `
 const ImageStyle = styled.img`
          width: ${props => props.width};

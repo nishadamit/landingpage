@@ -28,7 +28,7 @@ const Landingpage = () =>{
 
        return(
            <Layout className="layout">
-                <LandingHeader/>
+                {/* <LandingHeader/> */}
                 <LandingPageContent />
                 <Chart />
                 <AboutUs />

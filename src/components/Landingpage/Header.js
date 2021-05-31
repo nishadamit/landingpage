@@ -40,7 +40,7 @@ const LandingHeader = () =>{
 }
 
 const HeaderWrapper = styled(Header)`
-           background-color: #1e2841;
+           background: none;
            color: #ffffff;
            display: flex;
            flex-direction: row;
@@ -48,8 +48,15 @@ const HeaderWrapper = styled(Header)`
            align-items: center;
            padding: 20px 170px;
            height: 100px;
+           width: 100%;
            @media (max-width: 768px) {
                  padding: 20px 14px;
+           }
+
+        @media (min-width: 768px) {
+              margin-bottom: 55px;
+           } 
+           @media (max-width: 576px) {
            } 
 `;
 const ImageWrapper = styled.img`
