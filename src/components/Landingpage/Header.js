@@ -1,7 +1,6 @@
 import React,{ useState } from 'react';
 import { Layout,Button} from 'antd';
 import styled from 'styled-components';
-import {  Link } from "react-router-dom";
 import { MenuOutlined } from '@ant-design/icons';
 import Logo from '../../assests/images/kaigen-logo.png'
 const { Header,} = Layout;
@@ -23,9 +22,9 @@ const LandingHeader = () =>{
                </div>
                <div>
                     <HeaderMenuWrapper visible={sideBarValue}>
-                                <a onClick={() =>SetLink('aboutus')}><li>About Us</li></a>
-                                <a onClick={() =>SetLink('contactus')}><li>Contact Us</li></a>
-                                <a onClick={() =>SetLink('ourteam')}><li>Our Team</li></a>
+                                <a href={() => false} onClick={() =>SetLink('aboutus')}><li>About Us</li></a>
+                                <a  href={() => false}  onClick={() =>SetLink('contactus')}><li>Contact Us</li></a>
+                                <a  href={() => false}  onClick={() =>SetLink('ourteam')}><li>Our Team</li></a>
                                 <MobileLink href="https://www.pilot-genxchange.tk/signin"><li>Log In</li></MobileLink>
                                 <MobileLink href="https://www.pilot-genxchange.tk/signup"><li>Sign Up</li></MobileLink>
                                 <ButtonLink ><li><Button shape="round" href="https://www.pilot-genxchange.tk/signin">Login</Button></li></ButtonLink>

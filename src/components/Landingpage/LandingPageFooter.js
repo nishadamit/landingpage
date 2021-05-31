@@ -12,10 +12,10 @@ const LandingPageFooter = ({setTermModal,setPrivacyModal}) =>{
                <Row align="middle">
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}>
                        <ListStyle>
-                            <a><li>Support</li></a>
-                            <a onClick={() =>setTermModal(true)}><li>Terms And Condition</li></a>
-                            <a onClick={() =>setPrivacyModal(true)}><li>Privacy Policy</li></a>
-                            <a><li>FAQs</li></a>
+                            <a href="#"><li>Support</li></a>
+                            <a  href={() => false}  onClick={() =>setTermModal(true)}><li>Terms And Condition</li></a>
+                            <a  href={() => false}  onClick={() =>setPrivacyModal(true)}><li>Privacy Policy</li></a>
+                            <a  href="#" ><li>FAQs</li></a>
                         </ListStyle>
                     </Col>
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}> 

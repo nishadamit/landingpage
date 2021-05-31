@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout,Row,Col, Card,Avatar} from 'antd';
+import { Col, Card,} from 'antd';
 import styled from 'styled-components';
 import { LinkedinOutlined } from '@ant-design/icons';
 const { Meta } = Card;

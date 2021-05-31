@@ -1,9 +1,7 @@
 import React from 'react';
-import { Layout,Row,Col,Form, Input, InputNumber, Button,Checkbox} from 'antd';
+import { Layout,Row,Col,Form, Input, Button,Checkbox} from 'antd';
 import Map from './Map'
 import styled from 'styled-components';
-import { FaPhoneAlt } from 'react-icons/fa';
-import { MdEmail,MdLocationOn } from "react-icons/md";
 
 const {   Content, } = Layout;
 

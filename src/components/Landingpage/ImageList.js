@@ -1,12 +1,20 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Row, Col,} from 'antd';
 import styled from 'styled-components';
-import Checklistparagraph from './Checklistparagraph'
+import Checklistparagraph from './Checklistparagraph';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const ImageList = (props) =>{
+
+    useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
         
        return(
-              <ImageListWrapper>
+              <ImageListWrapper data-aos="fade-up">
                     <ImageWrapperCol1 lg={{span:6,offset:5}} md={{span:6,offset:1}} sm={{span:18,offset:5}} xs={{span:18,offset:5}}>
                           <StyledImage 
                               src={props.image}

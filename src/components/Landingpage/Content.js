@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout,Row,Col,} from 'antd';
 import styled from 'styled-components';
-import BackgroundImage from '../../assests/images/background2.png';
+import BackgroundImage from '../../assests/images/mainbackground.jpg';
 import kaigen from '../../assests/images/kaigen.png'
 import GooglePlay from '../../assests/images/googleplay.png';
 import AppStore from '../../assests/images/appstore.png';
@@ -28,8 +28,8 @@ const LandingPageContent = () =>{
                                       <ImageStyle src={kaigen} width='200px' />
                                   </div>
                                   <div>
-                                       <a><ImageStyle src={GooglePlay} width='160px' /></a>
-                                       <a><ImageStyle src={AppStore} width='120px' /></a>
+                                       <a  href={() => false} ><ImageStyle src={GooglePlay} width='160px' /></a>
+                                       <a  href={() => false} ><ImageStyle src={AppStore} width='120px' /></a>
                                   </div>
                              </div>
                         </Header2right>

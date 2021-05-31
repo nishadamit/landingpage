@@ -1,7 +1,7 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { Layout,Row,Col, Card,Avatar} from 'antd';
+import { Row,Col} from 'antd';
 import { chartData } from './ChartData';
 
 
