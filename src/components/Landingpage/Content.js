@@ -18,24 +18,26 @@ const LandingPageContent = () =>{
       return(
           <Content>
                 <ContentRow color="#1e2841" padding="55px">
-                    <LandingHeader />
-                    <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22}} xs={{span:22,offset:1}}>
-                            <LandingTabs/>
-                    </Col>
-                    <Col lg={{span:11,offset:2}}  md={{span:12,offset:1}} sm={{span:20,offset:2}} xs={{span:20,offset:2}}>
-                        <Header2right >
-                             <div>
-                                  <Heading>Virtual Currency on</Heading>
-                                  <div>
-                                      <ImageStyle src={kaigen} width='200px' />
-                                  </div>
-                                  <div>
-                                       <a  href={() => false} ><ImageStyle src={GooglePlay} width='160px' /></a>
-                                       <a  href={() => false} ><ImageStyle src={AppStore} width='120px' /></a>
-                                  </div>
-                             </div>
-                        </Header2right>
-                    </Col>
+                   <BackgroundOverlay>
+                              <LandingHeader />
+                              <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22}} xs={{span:22,offset:1}}>
+                                    <LandingTabs/>
+                              </Col>
+                              <Col lg={{offset:6,span:8}}  md={{span:12,offset:1}} sm={{span:20,offset:2}} xs={{span:20,offset:2}}>
+                                    <Header2right >
+                                    <div>
+                                          <Heading>Virtual Currency on</Heading>
+                                          <div>
+                                                <ImageStyle src={kaigen} width='200px' />
+                                          </div>
+                                          <div>
+                                                <a  href={() => false} ><ImageStyle src={GooglePlay} width='160px' /></a>
+                                                <a  href={() => false} ><ImageStyle src={AppStore} width='120px' /></a>
+                                          </div>
+                                    </div>
+                                    </Header2right>
+                              </Col>
+                     </BackgroundOverlay>
                 </ContentRow>
                 <ContentRow2>
                         <ImageList
@@ -68,15 +70,13 @@ const ContentRow = styled(Row)`
         height: 100vh;
         background-position: center;
         background-size: cover;
+        background-color: #000000;
  `
  const ContentRow2 = styled.div`
         padding-top: 70px;
         background-color: #ffffff;
 `
-
 const Header2right = styled.div`
-            
-            
             height: 350px;
             background-position: 62%;
             
@@ -88,6 +88,10 @@ const Heading = styled.h1`
           font-size: 20px;
           font-weight: 400;
           color: #ffffff;
+`
+const BackgroundOverlay = styled(Row)`
+        background-color: #00000040;
+        width: 100%;
 `
 
 export default LandingPageContent
