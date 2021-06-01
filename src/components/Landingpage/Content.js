@@ -90,7 +90,7 @@ const Heading = styled.h1`
           color: #ffffff;
 `
 const BackgroundOverlay = styled(Row)`
-        background-color: #00000040;
+        background-color: #000000b0;
         width: 100%;
 `
 
