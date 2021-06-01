@@ -46,7 +46,7 @@ const HeaderWrapper = styled(Header)`
            flex-direction: row;
            justify-content: space-between;
            align-items: center;
-           padding: 20px 170px;
+           padding: 20px 50px;
            height: 100px;
            width: 100%;
            @media (max-width: 768px) {
