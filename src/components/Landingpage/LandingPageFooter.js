@@ -1,5 +1,6 @@
-import React from 'react';
+import React , { useEffect } from 'react';
 import { Layout,Row, Col  } from 'antd';
+import AOS from 'aos';
 import styled from 'styled-components';
 import { FaFacebookF, FaTwitter, FaWhatsapp, FaInstagram, FaPinterestP, FaLinkedin} from 'react-icons/fa';
 
@@ -7,9 +8,16 @@ import { FaFacebookF, FaTwitter, FaWhatsapp, FaInstagram, FaPinterestP, FaLinked
 const {   Footer, } = Layout;
 
 const LandingPageFooter = ({setTermModal,setPrivacyModal}) =>{
+
+    useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
+
       return(
           <StyledFooter >
-               <Row align="middle">
+               <Row align="middle"   data-aos="fade-up">
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}>
                        <ListStyle>
                             <a href="#"><li>Support</li></a>

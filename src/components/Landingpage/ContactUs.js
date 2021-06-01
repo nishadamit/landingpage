@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Layout,Row,Col,Form, Input, Button,Checkbox} from 'antd';
+import AOS from 'aos';
 import Map from './Map'
 import styled from 'styled-components';
 
@@ -8,8 +9,14 @@ const {   Content, } = Layout;
 
 const ContactUs = () =>{
 
+    useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
+
       return(
-          <Content id="contactus">
+          <Content id="contactus" data-aos="fade-up" >
               <WrapperRow>
                   <Col span={24}>
                        <Heading>Contact Us</Heading>

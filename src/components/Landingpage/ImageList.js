@@ -3,7 +3,7 @@ import { Row, Col,} from 'antd';
 import styled from 'styled-components';
 import Checklistparagraph from './Checklistparagraph';
 import AOS from 'aos';
-import "aos/dist/aos.css";
+
 
 const ImageList = (props) =>{
 

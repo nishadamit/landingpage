@@ -1,4 +1,5 @@
 import React from 'react';
+import "aos/dist/aos.css";
 import './App.css';
 import LandingPage from './pages/Landingpage';
 import { BrowserRouter, Route, Switch } from "react-router-dom";

@@ -1,9 +1,9 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { Row,Col} from 'antd';
+import AOS from 'aos';
 import { chartData } from './ChartData';
-
 
 const data = {
     chart: {
@@ -60,10 +60,18 @@ const data = {
 }
 
 const Chart = () =>{
+
+
+    useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
+    
        return(
            <>
               <hr />
-              <Row>
+              <Row  data-aos="fade-up" >
                   <Col lg={{span:19,offset:2}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                        <HighchartsReact highcharts={Highcharts} options={data} />
                   </Col>

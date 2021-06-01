@@ -1,10 +1,8 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Layout,Row,Col,} from 'antd';
 import styled from 'styled-components';
+import AOS from 'aos';
 const {   Content, } = Layout;
-
-
-
 
 const AboutUs = () =>{
 
@@ -21,8 +19,14 @@ const AboutUs = () =>{
          {id:11,name:'TRADING BANK',value:'RAKUTEN Bank Ltd. Head Office Branch'},
      ]
 
+     useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
+
     return(
-        <AboutUsWrapper id="aboutus">
+        <AboutUsWrapper id="aboutus"  data-aos="fade-up" >
             <Row>
                 <ColWrapper lg={{offset:3,span:18}}>
                         <AboutUsHeading>About Us</AboutUsHeading>

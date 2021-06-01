@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Layout,Row,Col }  from 'antd';
+import AOS from 'aos';
 import styled from 'styled-components';
 import OurTeamCard from './OurTeamCard';
 const {   Content, } = Layout;
@@ -32,8 +33,15 @@ const TeamData = [
 ]
 
 const OurTeam = () =>{
+
+    useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
+
     return(
-        <OurTeamWrapper id="ourteam">
+        <OurTeamWrapper id="ourteam" data-aos="fade-up" >
             <MainRowWrapper2>
                 <ColWrapper lg={{offset:3,span:18}}>
                         <OurTeamHeading>Our Team</OurTeamHeading>
