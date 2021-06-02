@@ -11,6 +11,7 @@ import LandingImage2 from '../../assests/images/LandingImage2.png'     ;
 import LandingImage3 from '../../assests/images/LandingImage3.jpeg';
 import ImageList from './ImageList'
 import LandingTabs from './Tabs';
+import ImageCrousel from './Crousel';
 const {   Content, } = Layout;
 
 
@@ -18,6 +19,7 @@ const LandingPageContent = () =>{
       return(
           <Content>
                 <ContentRow color="#1e2841" padding="55px">
+                   <ImageCrousel />
                    <BackgroundOverlay>
                               <LandingHeader />
                               <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22}} xs={{span:22,offset:1}}>
@@ -65,12 +67,12 @@ const LandingPageContent = () =>{
 
 
 const ContentRow = styled(Row)`
-        background-image:url(${BackgroundImage});
-        background-repeat: no-repeat;
+        /* background-image:url(${BackgroundImage});
+        background-repeat: no-repeat; */
         height: 100vh;
-        background-position: center;
+        /* background-position: center;
         background-size: cover;
-        background-color: #000000;
+        background-color: #000000; */
  `
  const ContentRow2 = styled.div`
         padding-top: 70px;
@@ -90,8 +92,10 @@ const Heading = styled.h1`
           color: #ffffff;
 `
 const BackgroundOverlay = styled(Row)`
-        background-color: #000000b0;
         width: 100%;
+        background-color: #000000b0;
+        z-index: 2;
+
 `
 
 export default LandingPageContent
