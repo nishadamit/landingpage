@@ -24,12 +24,12 @@ const TeamData = [
         desiganation:"Head of Development Services",
         image:"https://static.wixstatic.com/media/551b23_84c616c1e62d45fd8cb7d67df4b95bdd~mv2.jpg/v1/fill/w_210,h_217,al_c,lg_1,q_80/Untitled21_edited_edited.webp"
     },
-    {
-        id:4,
-        name:"Sachin Kharat",
-        desiganation:"Head of Technical Services",
-        image:"https://static.wixstatic.com/media/551b23_d295df512b33430ca8f0f1ec39a15ea6~mv2.jpg/v1/crop/x_12,y_13,w_186,h_192/fill/w_210,h_217,al_c,lg_1,q_80/download_edited.webp"
-    },
+    // {
+    //     id:4,
+    //     name:"Sachin Kharat",
+    //     desiganation:"Head of Technical Services",
+    //     image:"https://static.wixstatic.com/media/551b23_d295df512b33430ca8f0f1ec39a15ea6~mv2.jpg/v1/crop/x_12,y_13,w_186,h_192/fill/w_210,h_217,al_c,lg_1,q_80/download_edited.webp"
+    // },
 ]
 
 const OurTeam = () =>{
@@ -45,7 +45,7 @@ const OurTeam = () =>{
             <MainRowWrapper2>
                 <ColWrapper lg={{offset:3,span:18}}>
                         <OurTeamHeading>Our Team</OurTeamHeading>
-                        <Row>
+                        <Row justify="space-around">
                             {TeamData.map((data) => <OurTeamCard details={data} key={data.name}/>)}
                         </Row>
                         <RowWrapper gutter={[0,64]}>
