@@ -34,7 +34,7 @@ const ImageCrousel = () =>{
         >
          {
              data.map((image) =><div>
-                                    <img src={image.url} style={{height:'100vh',width:'100vw'}} />
+                                    <ImageWrapper src={image.url} />
                                 </div>)
          }
         </StyledCrouselWrapper>
@@ -44,7 +44,13 @@ const ImageCrousel = () =>{
 const StyledCrouselWrapper = styled(Carousel)`
             position: absolute;
             height: 100vh;
-            width: 100vw;
+            width: 100%;
+`
+
+const ImageWrapper = styled.img`
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
 `
 
 export default ImageCrousel

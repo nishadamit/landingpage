@@ -95,6 +95,7 @@ const BackgroundOverlay = styled(Row)`
         width: 100%;
         background-color: #000000b0;
         z-index: 2;
+        height: 100%;
 
 `
 
