@@ -1,34 +1,17 @@
 import React from 'react';
-import Modal from 'react-modal';
-import { ImCross } from "react-icons/im";
+import styled from 'styled-components';
+import ModalComponent from './Modal';
 
-const TermsAndConditionModal = ({modalIsOpen,setTermModal}) =>{
-
-
-    const customStyles = {
-        content : {
-          top        : '50%',
-          left       : '50%',
-          transform   : 'translate(-50%, -50%)'
-        }
-      };
+const TermsAndConditionModal = (props) =>{
 
 
        return(
-           <div>
-            <Modal
-                isOpen={modalIsOpen}
-                contentLabel="Example Modal"
-                style={customStyles}
-                ariaHideApp={false}
-            >
-                <div className="terms-modal-header">
-                        <h3>Terms And Condition</h3>
-                        <ImCross
-                            onClick={() =>setTermModal(false)}
-                        />
-                </div>
-                <div className="terms-main-content">
+            <ModalComponent
+                    title="Terms and Condition"
+                    visibilty={props.modalIsOpen}
+                    handleModals={props.handleModals}
+             >
+                <TermsDivWrapper>
                     <h1>Terms and Conditions</h1>
                     <p className="notice">Notice for Japanese Residents, United States Residents and Malaysian Residents ONLY</p>
                     <p>Please note that due to respective local regulations, we do not accept registrations from residents of Japan, United States of America & Malaysia. Further we do not accept registrations if you are using or accessing KaigenXchange Services on behalf of an entity that is incorporated, established, or domiciled in Japan, the United States of America or Malaysia.</p>
@@ -253,26 +236,24 @@ const TermsAndConditionModal = ({modalIsOpen,setTermModal}) =>{
                     <p>hese Terms and Conditions will bind each User and K-genxchange and their respective successors in title and assigns and will continue to bind each User notwithstanding any change in K-genxchange’s name or constitution or K-genxchange’s merger, consolidation or amalgamation with or into any other entity (in which case these Terms and Conditions will bind each User to K-genxchange’s successor entity).</p>
                     <h4>31.Sub-contracting and Delegation</h4>
                     <p>K-genxchange may delegate or sub-contract the performance of any of its functions in connection with the K-genxchange Services.</p>
-                </div>
-                <div className="terms-modal-footer">
-                    {/* <div>
-                         <input 
-                             type="checkbox" 
-                             id="termsandcondition" 
-                             name="termsandcondition" 
-                             value="termsandcondition" 
-                             onChange={() =>props.handleCheckBox('termsandcondition')}
-                             checked={props.termsandcondition}
-                         />
-                         <label htmlFor="termsandcondition">I acknowledge that I have read and agree to KaigenX India's Terms and Conditions.</label>
-                    </div>
-                     <button
-                       onClick={() =>props.termsModal(false)}
-                     >Done</button> */}
-                </div>
-            </Modal>
-           </div>
+                </TermsDivWrapper>
+                </ModalComponent>
        )
 }
+
+const TermsDivWrapper = styled.div`
+       p,h4,h5,h1,ul{
+           color: #ffffff;
+           span{
+           color:#448af4 ;
+       }
+       }
+       .notice{
+           text-decoration: underline;
+       }
+       span{
+           color:#448af4 ;
+       }
+`
 
 export default TermsAndConditionModal

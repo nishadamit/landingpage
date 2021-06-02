@@ -7,7 +7,7 @@ import { FaFacebookF, FaTwitter, FaWhatsapp, FaInstagram, FaPinterestP, FaLinked
 
 const {   Footer, } = Layout;
 
-const LandingPageFooter = ({setTermModal,setPrivacyModal}) =>{
+const LandingPageFooter = ({setFaqModal,setTermModal,setPrivacyModal,setSupportModal}) =>{
 
     useEffect(() => {
         AOS.init({
@@ -17,13 +17,13 @@ const LandingPageFooter = ({setTermModal,setPrivacyModal}) =>{
 
       return(
           <StyledFooter >
-               <Row align="middle"   data-aos="fade-up">
+               <Row align="middle">
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}>
                        <ListStyle>
-                            <a href="#"><li>Support</li></a>
+                            <a  href={() => false}  onClick={() =>setSupportModal(true)}><li>Support</li></a>
                             <a  href={() => false}  onClick={() =>setTermModal(true)}><li>Terms And Condition</li></a>
                             <a  href={() => false}  onClick={() =>setPrivacyModal(true)}><li>Privacy Policy</li></a>
-                            <a  href="#" ><li>FAQs</li></a>
+                            <a  href={() => false}  onClick={() =>setFaqModal(true)} ><li >FAQs</li></a>
                         </ListStyle>
                     </Col>
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}> 

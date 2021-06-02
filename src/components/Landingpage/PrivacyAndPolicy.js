@@ -1,31 +1,16 @@
 import React from 'react';
-import Modal from 'react-modal';
-import { ImCross } from "react-icons/im";
+import styled from 'styled-components';
+import ModalComponent from './Modal';
 
-const  PrivacyAndPolicy = ({modalIsOpen,setPrivacyModal}) => {
-
-    const customStyles = {
-        content : {
-          top        : '50%',
-          left       : '50%',
-          transform   : 'translate(-50%, -50%)'
-        }
-      };
+const  PrivacyAndPolicy = (props) => {
 
     return (
-        <div>
-        <Modal
-            isOpen={modalIsOpen}
-            contentLabel="Example Modal"
-            style={customStyles}
+        <ModalComponent
+                title="Privacy and Policy"
+                visibilty={props.modalIsOpen}
+                handleModals={props.handleModals}
         >
-            <div className="terms-modal-header">
-                    <h3>PRIVACY AND POLICY</h3>
-                    <ImCross
-                        onClick={() =>setPrivacyModal(false)}
-                    />
-            </div>
-            <div className="terms-main-content">
+            <PrivacyDivWrapper>
                 <h1>Privacy Policy</h1>
                 <h4>KaigenX Privacy Policy<br/>Updated 1 October 2019</h4>
                 <p className="notice">Notice for Japanese Residents, United States Residents and Malaysian Residents ONLY</p>
@@ -116,26 +101,25 @@ const  PrivacyAndPolicy = ({modalIsOpen,setPrivacyModal}) => {
                 <h4>13.QUESTIONS</h4>
                 <p>The headings and subheadings herein are included for convenience and identification only and are not intended to interpret, define or limit the scope, extent or intent of this Privacy Policy in any manner whatsoever.</p>
                 <p>The meaning of general words is not limited by specific examples introduced by expressions such as, “including”, “for example”, “such as”, or such similar expressions, and the word “includes” or “including” as used in this Privacy Policy shall be construed to mean “includes without limitation” or, as the case may be, “including without limitation”.</p>
-            </div>
-            <div className="terms-modal-footer">
-                {/* <div>
-                     <input 
-                        type="checkbox" 
-                        id="termsandcondition" 
-                        name="termsandcondition" 
-                        value="termsandcondition"
-                        onChange={() =>props.handleCheckBox('privacyandpolicy')}
-                        checked={props.privacyandpolicy}
-                    />
-                     <label htmlFor="termsandcondition">I acknowledge that I have read and agree to KaigenX India's Terms and Conditions.</label>
-                </div>
-                 <button
-                    onClick={() =>props.privacyModal(false)}
-                 >Done</button> */}
-            </div>
-        </Modal>
-       </div>
+            </PrivacyDivWrapper>
+        </ModalComponent>
     )
 }
+
+const PrivacyDivWrapper = styled.div`
+       p,h4,h5,h1{
+           color: #ffffff;
+
+           span{
+           color:#448af4 ;
+       }
+       }
+       .notice{
+           text-decoration: underline;
+       }
+       span{
+           color:#448af4 ;
+       }
+`
 
 export default PrivacyAndPolicy
