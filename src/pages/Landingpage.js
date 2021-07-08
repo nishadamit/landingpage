@@ -11,7 +11,8 @@ import PrivacyPolicy from '../components/Landingpage/PrivacyAndPolicy';
 import Chart from '../components/Landingpage/Chart';
 import FaqModal from '../components/Landingpage/Faqmodal';
 import SupportModal from '../components/Landingpage/SupportModal';
-import TradingViewChart from '../components/Landingpage/TradingViewChart';
+// import TradingViewChart from '../components/Landingpage/TradingViewChart';
+import TradingViewContainer from '../components/Landingpage/TradingViewContainer';
 
 const Landingpage = () =>{
 
@@ -43,10 +44,10 @@ const Landingpage = () =>{
            <Layout className="layout">
                 {/* <LandingHeader/> */}
                 <LandingPageContent />
-                <Chart />
+                <TradingViewContainer />
+                {/* <TradingViewChart /> */}
+                {/* <Chart /> */}
                 <AboutUs />
-                <TradingViewChart />
-
                 <OurTeam/>
                 <ContactUs />
                 <LandingFooter
