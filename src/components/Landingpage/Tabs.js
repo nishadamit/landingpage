@@ -28,6 +28,17 @@ const StyledTabs = styled(Tabs)`
         }
         .ant-tabs-tab{
             width: 50%;
+            background-color: #DCDCDC !important;
+            height: 50px;
+            margin-left: 0px !important;
+        }
+        .ant-tabs-tab-active{
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+        .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+            color: #000000 !important;
+            opacity: 0.6;
         }
         .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab, .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab, .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab, .ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
             margin-left: 0px !important;

@@ -2,6 +2,8 @@ import React,{ useEffect } from 'react';
 import { Layout,Row,Col,} from 'antd';
 import styled from 'styled-components';
 import AOS from 'aos';
+import greemImage from '../../assests/images/green-img.png';
+import TinguBoy from '../../assests/images/tingu-boy.png'
 const {   Content, } = Layout;
 
 const AboutUs = () =>{
@@ -28,8 +30,8 @@ const AboutUs = () =>{
     return(
         <AboutUsWrapper id="aboutus"  data-aos="fade-up" >
             <Row>
-                <ColWrapper lg={{offset:3,span:18}}>
-                        <AboutUsHeading>About Us</AboutUsHeading>
+                <ColWrapper1 lg={{span:18}}>
+                    <ColWrapper1Inner>
                         <Heading>Company Details</Heading>
                         {
                             Details.map((data) =>{
@@ -41,8 +43,10 @@ const AboutUs = () =>{
                                   )
                             })
                         }
-
-                </ColWrapper>
+                    </ColWrapper1Inner>
+                </ColWrapper1>
+                <ColWrapper2 lg={{span:6}}>
+                </ColWrapper2>
             </Row>
              
         </AboutUsWrapper>
@@ -54,31 +58,28 @@ const ListRowWrapper = styled(Row)`
 `
 
 const AboutUsWrapper = styled(Content)`
-       background-color: #1e2841;
        color: #ffffff;
 `
-const ColWrapper  = styled(Col)`
-         border: 2px solid #ffffff;
+const ColWrapper1  = styled(Col)`
          position: relative;
-         margin-top: 40px;
-         margin-bottom: 25px;
-         padding: 25px;
+         background-image: url(${greemImage});
 `
-const AboutUsHeading = styled.h1`
-         color: #ffffff;
-         position: absolute;
-         top: -17px;
-         text-align: center;
-         left: 10%;
-         background-color: #1e2841;
-         padding: 0px 10px;
+const ColWrapper1Inner  = styled.div`
+         position: relative;
+         background-color: #24aa3d9c;
+         padding: 70px 25px;
 `
+const ColWrapper2  = styled(Col)`
+         position: relative;
+         background-image: url(${TinguBoy});
+`
+
 const Heading = styled.h3`
           color: #ffffff;
-          text-align: center;
-          margin-bottom: 10px;
+          margin-bottom: 25px;
           font-weight: 700;
-          font-size: 25px;
+          font-size: 30px;
+          margin-left:12%;
 `
 
 export default AboutUs

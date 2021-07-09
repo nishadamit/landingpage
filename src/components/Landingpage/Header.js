@@ -1,10 +1,11 @@
 import React,{ useState } from 'react';
-import { Layout,Button} from 'antd';
+import { Layout} from 'antd';
 import styled from 'styled-components';
-import { MenuOutlined } from '@ant-design/icons';
+import { MenuOutlined , ArrowRightOutlined ,UserOutlined} from '@ant-design/icons';
+import { FaFacebookF, FaTwitter, FaWhatsapp, FaInstagram, FaPinterestP, FaLinkedin} from 'react-icons/fa';
+import { StyledButton } from './Button';
 import Logo from '../../assests/images/kaigen-logo.png'
 const { Header,} = Layout;
-
 const LandingHeader = () =>{
       
       const [ sideBarValue ,setSideBar ] =  useState(false)
@@ -27,8 +28,32 @@ const LandingHeader = () =>{
                                 <a  href={() => false}  onClick={() =>SetLink('ourteam')}><li>Our Team</li></a>
                                 <MobileLink href="https://www.pilot-genxchange.tk/signin"><li>Log In</li></MobileLink>
                                 <MobileLink href="https://www.pilot-genxchange.tk/signup"><li>Sign Up</li></MobileLink>
-                                <ButtonLink ><li><Button shape="round" href="https://www.pilot-genxchange.tk/signin">Login</Button></li></ButtonLink>
-                                <ButtonLink ><li><Button shape="round" href="https://www.pilot-genxchange.tk/signup">Sign Up for free!</Button></li></ButtonLink>
+                                <ButtonLink  >
+                                    <li>
+                                        <StyledButton 
+                                            shape="round" 
+                                            backgroundColor= "#F76943" 
+                                            COLOR="#ffffff" 
+                                            href="https://www.pilot-genxchange.tk/signin"
+                                        >
+                                            Login
+                                            <ArrowRightOutlined color="#ffffff" />
+                                        </StyledButton>
+                                    </li>
+                                </ButtonLink>
+                                <ButtonLink >
+                                    <li>
+                                        <StyledButton 
+                                            shape="round" 
+                                            backgroundColor="#24AA3D"  
+                                            COLOR="#ffffff" 
+                                            href="https://www.pilot-genxchange.tk/signup"
+                                        >
+                                            SIGN UP
+                                            <UserOutlined color="#ffffff" />
+                                        </StyledButton>
+                                    </li>
+                                </ButtonLink>
                     </HeaderMenuWrapper>
                     <Overlay visible={sideBarValue} onClick={() =>setSideBar(false)} />
                </div>
@@ -80,6 +105,7 @@ const HeaderMenuWrapper = styled.ul`
             a li{
                 margin-right: 25px;
                 color: #ffffff;
+                font-size: 17px;
             }
             @media(max-width:576px){
                 display: flex;
@@ -116,7 +142,8 @@ const HamburgurIcon = styled(MenuOutlined)`
 const ButtonLink = styled.a`
          @media (max-width: 576px) {
             display: none;
-    } 
+    }
+    background-color: ${props =>(props.backgroundColor)};
 `
 const MobileLink= styled.a`
       @media (min-width: 576px) {

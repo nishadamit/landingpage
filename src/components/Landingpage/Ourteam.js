@@ -3,6 +3,8 @@ import { Layout,Row,Col }  from 'antd';
 import AOS from 'aos';
 import styled from 'styled-components';
 import OurTeamCard from './OurTeamCard';
+import { Paragraph } from './Text';
+import { ImageBox } from './Image';
 const {   Content, } = Layout;
 
 
@@ -41,59 +43,45 @@ const OurTeam = () =>{
       }, []);
 
     return(
-        <OurTeamWrapper id="ourteam" data-aos="fade-up" >
-            <MainRowWrapper2>
-                <ColWrapper lg={{offset:3,span:18}}>
+            <MainRowWrapper>
+                <Col lg={{offset:3,span:7}}>
                         <OurTeamHeading>Our Team</OurTeamHeading>
                         <Row justify="space-around">
                             {TeamData.map((data) => <OurTeamCard details={data} key={data.name}/>)}
                         </Row>
-                        <RowWrapper gutter={[0,64]}>
-                             <Col className="gutter-row" span={24}><Heading>Message from CEO</Heading></Col>
-                             <MainRowWrapper >
+                </Col>
+                <Col2 lg={{offset:2,span:12}}>
+                             <Row>
                                  <ColWrapper2 lg={{span:24}}  sm={{span:24}} xs={{span:24}} >
                                  {/* <Heading>Message from CEO</Heading> */}
-                                        <ImageWrapper src={TeamData[0].image} />
+                                        <ImageBox 
+                                            source={TeamData[0].image}
+                                            alt="Raj Kundan"            
+                                            WIDTH="130px"
+                                            HEIGHT="130px"
+                                            borderRadius="50%"
+                                            border="5px solid #ffffff"
+                                        />
                                         <Heading3>Raj Kundan <br /> Chief Executive Officer / Co-Founder</Heading3>
                                  </ColWrapper2>
-                                 <ColWrapper3 lg={{span:24}} sm={{span:24}} xs={{span:24}}>
-                                        <p>Kaigen – Kaizen:改善 Generation:世代 is our way of starting a Technical Community that believes Kaizen philosophy from heart. Change is the only Constant. And by following Kaizen, working towards making smaller changes for good, we want to achieve our bigger goal of “Winning the Hearts” of our customers and eventually everyone in this world through our support, innovation, and passion.</p>
-                                        <p>Kaizen provides world class Technical services along with carefully chosen bouquet of Products from its Partner Network in the field of Automation, Network, Cloud, AI and Blockchain.  We have developed a close knitted multinational network of collaborators across Japan, India, Singapore, Europe and Malaysia with a wide range of skillset of more than 350+ Engineers operating from different geographies.</p>
-                                        <p>With an emphasis on Diversity, we encourage all our employees  to create new values while shining toward their dreams, goals and lead a happy life. We will continue to strive to provide our services that will aim to create a new future which can be useful to all of you and to be loved.</p>
+                                 <ColWrapper3 lg={{span:20,offset:2}} sm={{span:24}} xs={{span:24}}>
+                                        <Paragraph color="#ffffff">Kaigen – Kaizen:改善 Generation:世代 is our way of starting a Technical Community that believes Kaizen philosophy from heart. Change is the only Constant. And by following Kaizen, working towards making smaller changes for good, we want to achieve our bigger goal of “Winning the Hearts” of our customers and eventually everyone in this world through our support, innovation, and passion.</Paragraph>
+                                        <Paragraph color="#ffffff">Kaizen provides world class Technical services along with carefully chosen bouquet of Products from its Partner Network in the field of Automation, Network, Cloud, AI and Blockchain.  We have developed a close knitted multinational network of collaborators across Japan, India, Singapore, Europe and Malaysia with a wide range of skillset of more than 350+ Engineers operating from different geographies.</Paragraph>
+                                        <Paragraph color="#ffffff">With an emphasis on Diversity, we encourage all our employees  to create new values while shining toward their dreams, goals and lead a happy life. We will continue to strive to provide our services that will aim to create a new future which can be useful to all of you and to be loved.</Paragraph>
                                         <Heading2>We will continue to "challenge" for a new Change.</Heading2>
                                  </ColWrapper3>
-                             </MainRowWrapper>
-                        </RowWrapper>
-                </ColWrapper>
-                
-            </MainRowWrapper2>
-             
-        </OurTeamWrapper>
+                             </Row>
+                </Col2>
+            </MainRowWrapper>
     )
 }
 
 const MainRowWrapper = styled(Row)`
-       border: 2px solid #00000040;
-`
-const MainRowWrapper2 = styled(Row)`
-    @media(max-width:576px){
-        margin: 0px 5px;
-    }
-`
-const OurTeamWrapper = styled(Content)`
        background-color: #ffffff;
-       color: #1e2841;
+       padding-top: 75px;
 `
-const ColWrapper  = styled(Col)`
-         border: 2px solid #1e2841;
-         position: relative;
-         margin-top: 40px;
-         margin-bottom: 40px;
-         padding: 25px;
-         @media(max-width:576px){
-            padding: 15px;
-            margin-bottom: 10px;
-         }
+const Col2  = styled(Col)`
+       background-color: #F76943;
 `
 const ColWrapper2  = styled(Col)`
          text-align: center;
@@ -103,46 +91,31 @@ const ColWrapper3  = styled(Col)`
 `
 const OurTeamHeading = styled.h1`
          color: #1e2841;
-         position: absolute;
-         top: -17px;
          text-align: center;
          left: 10%;
          background-color: #ffffff;
          padding: 0px 10px;
 `
-const Heading = styled.h1`
-         text-align: center;
-         position: absolute;
-         margin-top: 25px;
 
-         @media(max-width:576px){
-            text-align: center;
-            margin-top: 0px;
-            position: relative;
-        }
-`
 const Heading2 = styled.h1`
          font-size: 20px;
          line-height: 25px;
          font-weight: 400;
          text-align: center;
+         color: #ffffff;
 `
 const Heading3 = styled.p`
-         color: #1e2841;
+         color: #ffffff;
          font-size: 18px;
          font-weight: 500;
          @media(max-width:576px){
             font-size: 16px;
         }
 `
-const RowWrapper = styled(Row)`
-      margin-top: 35px;
-`
 const ImageWrapper = styled.img`
       border-radius: 50%;
       margin-bottom: 10px;
       width: 130px;
       height: 130px;
-      margin-top: -65px;
 `
 export default OurTeam

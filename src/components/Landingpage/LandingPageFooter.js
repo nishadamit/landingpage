@@ -27,7 +27,7 @@ const LandingPageFooter = ({setFaqModal,setTermModal,setPrivacyModal,setSupportM
                         </ListStyle>
                     </Col>
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}> 
-                            <Heading>Follow on Social Media</Heading>
+                            {/* <Heading>Follow on Social Media</Heading> */}
                             <ListStyle2>
                                 <a href="https://www.facebook.com/"><FaFacebookF size="1.2rem" /></a>
                                 <a href="https://twitter.com/?lang=en"><FaTwitter  size="1.2rem" /></a>
@@ -45,9 +45,8 @@ const LandingPageFooter = ({setFaqModal,setTermModal,setPrivacyModal,setSupportM
 
 const StyledFooter = styled(Footer)`
         text-align: center;
-        background-color: #37435f;
+        background-color: #F76943;
         color: #ffffff;
-
         @media(max-width:576px){
             padding: 0px;
             padding-top: 15px;

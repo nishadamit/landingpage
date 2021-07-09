@@ -1,5 +1,7 @@
 import React from 'react';
-import { Form,Col,Input,Button} from 'antd';
+import { Form,Col,Input} from 'antd';
+import { StyledButton } from './Button';
+import { InputBox } from './Input';
 
 const LandingForm = () =>{
         return(
@@ -12,12 +14,20 @@ const LandingForm = () =>{
                                 name="username"
                                 rules={[{ required: true, message: 'Please input Email Address!' }]}
                             >
-                                <Input placeholder="Email Address" />
+                                <InputBox
+                                   placeholder="Email Address" 
+                                   HEIGHT="50px"
+                                />
                             </Form.Item>
                             <Form.Item>
-                                <Button block type="danger" htmlType="submit" className="login-form-button">
-                                    Sign Up For Free!
-                                </Button>
+                                <StyledButton                                             
+                                    shape="round" 
+                                    backgroundColor= "#24AA3D"
+                                    COLOR="#ffffff"  
+                                    htmlType="submit" 
+                                >
+                                    Sign Up
+                                </StyledButton>
                             </Form.Item>
                     </Form>
             </Col>

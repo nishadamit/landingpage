@@ -21,6 +21,7 @@ const TradingViewContainer = () =>{
 }
 
 const TabContainer = styled(Tabs)`
+      background-color: #ffffff;
       .ant-tabs-nav{
           padding: 10px 20px 0px 20px;
       }

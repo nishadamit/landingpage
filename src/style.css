@@ -1,0 +1,9 @@
+/* .series-2KhwsEwE .titleWrapper-2KhwsEwE .title-2KhwsEwE.title3rd-2KhwsEwE{
+    display: none !important;
+} */
+
+.sc-oeeztnzdMp{background-color: red;;}
+
+.series-2KhwsEwE .titleWrapper-2KhwsEwE .title-2KhwsEwE.title3rd-2KhwsEwE 
+    { display: none !important;}
+    #widget-container > div.js-rootresizer__contents > div.layout__area--center.no-border-bottom-left-radius.no-border-bottom-right-radius > div > div.chart-container-border > div > table > tr:nth-child(1) > td.chart-markup-table.pane > div > div.noWrap-2KhwsEwE.legend-2KhwsEwE.newCollapser-2KhwsEwE > div:nth-child(1) > div > div.noWrapWrapper-2KhwsEwE > div.titleWrapper-2KhwsEwE > div.title-2KhwsEwE.title3rd-2KhwsEwE.apply-overflow-tooltip.withDot-2KhwsEwE {display: none !important;}

@@ -1,8 +1,11 @@
 import React,{ useEffect } from 'react';
 import { Layout,Row,Col,Form, Input, Button,Checkbox} from 'antd';
 import AOS from 'aos';
-import Map from './Map'
 import styled from 'styled-components';
+import BlurredImage from '../../assests/images/blurred-img.png';
+import Map from './Map';
+import { StyledButton } from './Button';
+
 
 const {   Content, } = Layout;
 
@@ -16,13 +19,9 @@ const ContactUs = () =>{
       }, []);
 
       return(
-          <Content id="contactus" data-aos="fade-up" >
-              <WrapperRow>
-                  <Col span={24}>
-                       <Heading>Contact Us</Heading>
-                  </Col>
-              </WrapperRow>
-              <FormRowWrapper>
+          <Content data-aos="fade-up" >
+              <FormRowWrapper2>
+                  <FormRowWrapper>
                         <Col lg={{span:9,offset:3}} sm={{span: 24}} xs={{span: 24}} >
                         <Col lg={{span:11,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
                         <Heading3>Keep in touch with us</Heading3>
@@ -69,7 +68,7 @@ const ContactUs = () =>{
                                     </Form.Item>
                                 </Col>
                             </Row>
-                            <Row>
+                            {/* <Row>
                                 <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
                                     <Form.Item 
                                       name="companyname" 
@@ -79,7 +78,7 @@ const ContactUs = () =>{
                                         />
                                     </Form.Item>
                                 </Col>
-                            </Row>
+                            </Row> */}
                             <Row>
                                 <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
                                     <Form.Item 
@@ -92,7 +91,7 @@ const ContactUs = () =>{
                                     </Form.Item>
                                 </Col>
                             </Row>
-                            <Row>
+                            {/* <Row>
                                 <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
                                     <Form.Item >
                                         <StyledCheckbox>
@@ -109,13 +108,18 @@ const ContactUs = () =>{
                                         </StyledCheckbox>
                                     </Form.Item>
                                 </Col>
-                            </Row>
+                            </Row> */}
                             <Row>
                                 <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                                     <Form.Item >
-                                        <Button type="primary" htmlType="submit">
-                                        Send Message
-                                        </Button>
+                                        <StyledButton 
+                                            shape="round"  
+                                            backgroundColor="#41aa3d"
+                                            htmlType="submit"
+                                            COLOR="#ffffff"
+                                        >
+                                               Send Message
+                                        </StyledButton>
                                     </Form.Item>
                                 </Col>
                             </Row>
@@ -140,31 +144,25 @@ const ContactUs = () =>{
                             <li> <Heading5>Mail</Heading5></li>
                             <li> <span>info@kaigengroup.com</span></li>
                             <li> <span>sales@kaigengroup.com</span></li>
-                            <Map />
+                            {/* <Map /> */}
                         </List>
                        
                     </Col>
-              </FormRowWrapper>
+                    </FormRowWrapper>
+              </FormRowWrapper2>
           </Content>
           
       )
 }
-
-const WrapperRow = styled(Row)`
-        background-color:  #1e2841;
-`
-
-const Heading = styled.h1`
-          color: #ffffff;
-          margin-top: 25px;
-          text-align: center;
-          margin-bottom: 0px;
-          font-size: 30px;
-`
 const FormRowWrapper = styled(Row)`
           /* margin-top: 50px; */
-          background-color:  #1e2841;
+          background-color:  #0000003d;
           color: #ffffff;
+          padding: 100px 0px 50px 0px;
+`
+const FormRowWrapper2 = styled.div`
+          background-color:  #1e2841;
+          background-image: url(${BlurredImage});
 `
 const Heading3 = styled.h1`
           color: #ffffff;
