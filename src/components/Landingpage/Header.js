@@ -98,14 +98,13 @@ const HeaderMenuWrapper = styled.ul`
             justify-content: flex-end;
             align-items: center;
             list-style: none;
-            height: 20px;
-            line-height: 20px;
             padding: 0px;
             margin: 10px 0px 0px 0px;
             a li{
                 margin-right: 25px;
                 color: #ffffff;
-                font-size: 17px;
+                font-size: 15px;
+                line-height: 15px;
             }
             @media(max-width:576px){
                 display: flex;

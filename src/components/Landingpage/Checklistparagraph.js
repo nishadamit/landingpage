@@ -1,29 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
-import CheckList from '../../assests/images/checklist.svg'
+import { TiTick } from 'react-icons/ti';
+import { H5 } from './Text';
 
-const Checklistparagraph = ({description}) =>{
+const DATA = [
+    {id:1,title:"No fees for account creation"},
+    {id:2,title:"No fees for account maintenance"},
+    {id:3,title:"No fees on Buy/Sell"},
+    {id:4,title:"No fees on Bitcoin-FX trades"},
+    {id:5,title:"No fees on INR deposits through SBI Sumishin Net Bank to HDFC Bank"},
+]
+
+const Checklistparagraph = () =>{
        return(
-           <ParagraphWrapper>
-               <ImageWrapper src={CheckList} />
-               <Paragraph2>{description}</Paragraph2>
-           </ParagraphWrapper>
+           <div>
+               {DATA.map((data) =>{
+                   return(
+                       <DivWrapper>
+                           <TiTick size="1.2rem" color="#41aa3d" style={{marginRight:"10px"}} />
+                           <Paragraph>{data.title}</Paragraph>
+                       </DivWrapper>
+                   )
+               })}
+               
+               
+           </div>
        )
 }
-const ParagraphWrapper = styled.div`
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 5px;
-        align-items: flex-start;
+const DivWrapper = styled.div`
+      display: flex;
 `
-const ImageWrapper = styled.img`
-       width: 20px;
-`
-const Paragraph2 = styled.span`
-        font-size: 16px;
-        line-height: 22px;
-        font-weight: 400;
-        margin-left: 5px;
-`
+const Paragraph =styled.h5`
+       font-size: 14px;
+       font-weight: 300;
+       margin: 0px;
+       line-height: 20px;
+       flex-basis: 90%;
+` 
 
 export default Checklistparagraph
+
+
+
+

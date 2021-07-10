@@ -118,7 +118,7 @@ const ContactUs = () =>{
                                             htmlType="submit"
                                             COLOR="#ffffff"
                                         >
-                                               Send Message
+                                               Send
                                         </StyledButton>
                                     </Form.Item>
                                 </Col>

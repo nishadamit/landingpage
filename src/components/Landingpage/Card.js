@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ImageBox } from './Image';
-import { H3,Paragraph } from './Text';
+import { H3,H5 } from './Text';
+import Checklistparagraph from './Checklistparagraph';
 
 export const Card =(props) =>{
       return(
@@ -12,17 +13,30 @@ export const Card =(props) =>{
                         HEIGHT="150px"
                   />
                   <ContentWrapper>
-                    <H3>{props.Heading}</H3>
-                    <Paragraph>{props.Description}</Paragraph>
+                    <Heading>{props.Heading}</Heading>
+                    {props.name === "card1" ? <Checklistparagraph /> :<H5>{props.Description}</H5>}
                   </ContentWrapper>
          </CardContainer>
       )
 }
 
 const CardContainer = styled.div`
-      width: 300px;
+      width: "100%";
+      height: 375px;
       background-color: #ffffff;
+      @media(max-width:576px){
+            margin-top: 20px;
+        }
 `
+
+const Heading =styled.h3`
+       font-size: 20px;
+       line-height: 16px;
+       margin: 0px;
+       color: #313337;
+       margin-bottom: 10px;
+` 
+
 const ContentWrapper = styled.div`
-      padding: 20px 10px;
+      padding: 25px 15px;
 `

@@ -10,9 +10,6 @@ import AppStore from '../../assests/images/appstore.png';
 import CardImg1 from '../../assests/images/card-img1.png';
 import CardImg2 from '../../assests/images/card-img2.png';
 import CardImg3 from '../../assests/images/card-img3.png';
-import LandingImage2 from '../../assests/images/LandingImage2.png'     ;
-import LandingImage3 from '../../assests/images/LandingImage3.jpeg';
-import ImageList from './ImageList'
 import LandingTabs from './Tabs';
 import ImageCrousel from './Crousel';
 const {   Content, } = Layout;
@@ -45,25 +42,28 @@ const LandingPageContent = () =>{
                      </BackgroundOverlay>
                 </ContentRow>
                 <ContentRow2>
-                        <Col lg={{span:6,offset:3}} md={{span:8}} sm={{span:22}} xs={{span:22,offset:1}}>
+                        <Col lg={{span:6,offset:2}} md={{span:8}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                               <Card 
+                                    name="card1"
                                     source={CardImg1}
                                     Heading = "MANY FEES ARE WAIVED"
                                     Description="You can buy and sell small amounts of 12 popular Virtual Currencies including Bitcoin, Ripple (XRP), Monacoin, and Ethereum."
                               />
                         </Col>
-                        <Col lg={{span:6,offset:1}} md={{span:8}} sm={{span:22}} xs={{span:22,offset:1}}>
+                        <Col lg={{span:6,offset:1}} md={{span:8}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                               <Card 
+                                    name="card2"
                                     source={CardImg2}
-                                    Heading = "MANY FEES ARE WAIVED"
+                                    Heading = "Start with as little as 100 INR"
                                     Description="You can buy and sell small amounts of 12 popular Virtual Currencies including Bitcoin, Ripple (XRP), Monacoin, and Ethereum."
                               />
                               </Col>
-                        <Col lg={{span:6,offset:1}} md={{span:8}} sm={{span:22}} xs={{span:22,offset:1}}>
+                        <Col lg={{span:6,offset:1}} md={{span:8}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                               <Card 
+                                    name="card3"
                                     source={CardImg3}
-                                    Heading = "MANY FEES ARE WAIVED"
-                                    Description="You can buy and sell small amounts of 12 popular Virtual Currencies including Bitcoin, Ripple (XRP), Monacoin, and Ethereum."
+                                    Heading = "Easy-to-use trading interfaces"
+                                    Description="We have trading interfaces that are simple enough for beginners. Trading is available any time, anywhere; even on weekends and national holidays."
                               />
                         </Col>
                 </ContentRow2>
@@ -83,6 +83,9 @@ const ContentRow = styled(Row)`
  const ContentRow2 = styled(Row)`
         padding: 70px 0px;
         background-color: #F3F2F5;
+        @media(max-width:576px){
+            padding: 0px 0px 20px 0px;
+        }
 `
 const Header2right = styled.div`
             height: 350px;

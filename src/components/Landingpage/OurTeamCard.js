@@ -1,11 +1,10 @@
 import React from 'react';
 import { Col, Card,} from 'antd';
 import styled from 'styled-components';
-import { LinkedinOutlined } from '@ant-design/icons';
 import { ImageBox } from './Image';
-import { H2 } from './Text';
+import { H2,H5 } from './Text';
 import { Paragraph } from './Text';
-const { Meta } = Card;
+import { AiFillLinkedin } from 'react-icons/ai'
 
 const OurteamCard = ({details}) =>{
         return(
@@ -22,7 +21,8 @@ const OurteamCard = ({details}) =>{
                        </ImageContainer>
                        <CardContainer>
                             <H2>{details.name}</H2>
-                            <Paragraph>{details.desiganation}</Paragraph>
+                            <H5>{details.desiganation}</H5>
+                            <AiFillLinkedin size="1.3rem" color="#1686B0" />
                        </CardContainer>
                 </StyledCard>
             </Col>

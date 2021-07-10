@@ -54,14 +54,16 @@ const OurTeam = () =>{
                              <Row>
                                  <ColWrapper2 lg={{span:24}}  sm={{span:24}} xs={{span:24}} >
                                  {/* <Heading>Message from CEO</Heading> */}
-                                        <ImageBox 
-                                            source={TeamData[0].image}
-                                            alt="Raj Kundan"            
-                                            WIDTH="130px"
-                                            HEIGHT="130px"
-                                            borderRadius="50%"
-                                            border="5px solid #ffffff"
-                                        />
+                                       <ImageContainer>
+                                            <ImageBox 
+                                                source={TeamData[0].image}
+                                                alt="Raj Kundan"            
+                                                WIDTH="130px"
+                                                HEIGHT="130px"
+                                                borderRadius="50%"
+                                                border="5px solid #ffffff"
+                                            />
+                                        </ImageContainer>
                                         <Heading3>Raj Kundan <br /> Chief Executive Officer / Co-Founder</Heading3>
                                  </ColWrapper2>
                                  <ColWrapper3 lg={{span:20,offset:2}} sm={{span:24}} xs={{span:24}}>
@@ -82,6 +84,7 @@ const MainRowWrapper = styled(Row)`
 `
 const Col2  = styled(Col)`
        background-color: #F76943;
+       margin-top: 81px;
 `
 const ColWrapper2  = styled(Col)`
          text-align: center;
@@ -95,6 +98,10 @@ const OurTeamHeading = styled.h1`
          left: 10%;
          background-color: #ffffff;
          padding: 0px 10px;
+         margin: 0px;
+         font-size: 45px;
+         line-height: 34px;
+         color: #322B2B;
 `
 
 const Heading2 = styled.h1`
@@ -112,10 +119,7 @@ const Heading3 = styled.p`
             font-size: 16px;
         }
 `
-const ImageWrapper = styled.img`
-      border-radius: 50%;
-      margin-bottom: 10px;
-      width: 130px;
-      height: 130px;
+const ImageContainer = styled.div`
+      margin-top: -65px;
 `
 export default OurTeam
