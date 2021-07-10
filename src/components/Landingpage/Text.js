@@ -24,7 +24,7 @@ export const H5 =styled.h5`
 ` 
 
 export const Paragraph = styled.p`
-           font-size: 14px;
+           font-size: 16px;
            line-height: 20px;
            color: ${props => props.color ? props.color :'#000000'};
 `

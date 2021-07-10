@@ -16,4 +16,8 @@ const StyledButtonDesign = styled(Button)`
       padding: 0px 25px !important;
       height: 34px;
       line-height: 34px !important;
+      font-size: 16px;
+      &:hover{
+            pointer-events: none !important;
+      }
 `

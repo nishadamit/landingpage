@@ -103,7 +103,7 @@ const HeaderMenuWrapper = styled.ul`
             a li{
                 margin-right: 25px;
                 color: #ffffff;
-                font-size: 15px;
+                font-size: 18px;
                 line-height: 15px;
             }
             @media(max-width:576px){

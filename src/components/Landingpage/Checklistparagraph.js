@@ -18,7 +18,7 @@ const Checklistparagraph = () =>{
                    return(
                        <DivWrapper>
                            <TiTick size="1.2rem" color="#41aa3d" style={{marginRight:"10px"}} />
-                           <Paragraph>{data.title}</Paragraph>
+                           <CardParagraph>{data.title}</CardParagraph>
                        </DivWrapper>
                    )
                })}
@@ -30,8 +30,8 @@ const Checklistparagraph = () =>{
 const DivWrapper = styled.div`
       display: flex;
 `
-const Paragraph =styled.h5`
-       font-size: 14px;
+export const CardParagraph =styled.h5`
+       font-size: 16px;
        font-weight: 300;
        margin: 0px;
        line-height: 20px;

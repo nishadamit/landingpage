@@ -31,6 +31,10 @@ const StyledTabs = styled(Tabs)`
             background-color: #DCDCDC !important;
             height: 50px;
             margin-left: 0px !important;
+            font-size: 18px;
+            @media(max-width:576px){
+                font-size: 15px;
+            }
         }
         .ant-tabs-tab-active{
             background-color: #ffffff !important;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ImageBox } from './Image';
 import { H3,H5 } from './Text';
 import Checklistparagraph from './Checklistparagraph';
+import { CardParagraph } from './Checklistparagraph';
 
 export const Card =(props) =>{
       return(
@@ -14,7 +15,7 @@ export const Card =(props) =>{
                   />
                   <ContentWrapper>
                     <Heading>{props.Heading}</Heading>
-                    {props.name === "card1" ? <Checklistparagraph /> :<H5>{props.Description}</H5>}
+                    {props.name === "card1" ? <Checklistparagraph /> :<CardParagraph>{props.Description}</CardParagraph>}
                   </ContentWrapper>
          </CardContainer>
       )
@@ -22,7 +23,7 @@ export const Card =(props) =>{
 
 const CardContainer = styled.div`
       width: "100%";
-      height: 375px;
+      height: 400px;
       background-color: #ffffff;
       @media(max-width:576px){
             margin-top: 20px;

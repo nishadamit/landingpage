@@ -43,8 +43,8 @@ const OurTeam = () =>{
       }, []);
 
     return(
-            <MainRowWrapper>
-                <Col lg={{offset:3,span:7}}>
+            <MainRowWrapper  data-aos="fade-up">
+                <Col lg={{offset:2,span:7}}>
                         <OurTeamHeading>Our Team</OurTeamHeading>
                         <Row justify="space-around">
                             {TeamData.map((data) => <OurTeamCard details={data} key={data.name}/>)}
@@ -64,7 +64,8 @@ const OurTeam = () =>{
                                                 border="5px solid #ffffff"
                                             />
                                         </ImageContainer>
-                                        <Heading3>Raj Kundan <br /> Chief Executive Officer / Co-Founder</Heading3>
+                                        <Heading3>Raj Kundan</Heading3>
+                                        <Heading4>Chief Executive Officer / Co-Founder</Heading4>
                                  </ColWrapper2>
                                  <ColWrapper3 lg={{span:20,offset:2}} sm={{span:24}} xs={{span:24}}>
                                         <Paragraph color="#ffffff">Kaigen – Kaizen:改善 Generation:世代 is our way of starting a Technical Community that believes Kaizen philosophy from heart. Change is the only Constant. And by following Kaizen, working towards making smaller changes for good, we want to achieve our bigger goal of “Winning the Hearts” of our customers and eventually everyone in this world through our support, innovation, and passion.</Paragraph>
@@ -81,6 +82,9 @@ const OurTeam = () =>{
 const MainRowWrapper = styled(Row)`
        background-color: #ffffff;
        padding-top: 75px;
+       @media(max-width:576px){
+             padding-top: 35px;
+       }
 `
 const Col2  = styled(Col)`
        background-color: #F76943;
@@ -102,19 +106,27 @@ const OurTeamHeading = styled.h1`
          font-size: 45px;
          line-height: 34px;
          color: #322B2B;
+         @media(max-width:576px){
+            font-size: 30px;
+        }
 `
 
-const Heading2 = styled.h1`
-         font-size: 20px;
-         line-height: 25px;
-         font-weight: 400;
+const Heading2 = styled.span`
+         font-size: 23px;
          text-align: center;
          color: #ffffff;
 `
 const Heading3 = styled.p`
          color: #ffffff;
-         font-size: 18px;
-         font-weight: 500;
+         font-size: 26px;
+         margin-bottom: 0px;
+         @media(max-width:576px){
+            font-size: 16px;
+        }
+`
+const Heading4 = styled.p`
+         color: #ffffff;
+         font-size: 16px;
          @media(max-width:576px){
             font-size: 16px;
         }

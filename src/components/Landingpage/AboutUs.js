@@ -30,15 +30,16 @@ const AboutUs = () =>{
     return(
         <AboutUsWrapper id="aboutus"  data-aos="fade-up" >
             <Row>
-                <ColWrapper1 lg={{span:18}}>
+                <ColWrapper1 lg={{span:18}} sm={{span:24}} xs={{span:24}}>
                     <ColWrapper1Inner>
                         <Heading>Company Details</Heading>
                         {
                             Details.map((data) =>{
                                   return(
                                     <ListRowWrapper justify="center" key={data.name} >
-                                        <Col lg={{span:4,offset:2}} sm={{span:8}} xs={{span:8}} >{data.name}</Col>
-                                        <Col  lg={{span:14 ,offset:2}} sm={{span:16}} xs={{span:16}}>{data.value}</Col>
+                                        <Col lg={{span:4,offset:1}} md={{span:4,offset:1}} sm={{span:6}} xs={{span:6}} ><Title>{data.name}</Title></Col>
+                                        <Col lg={{span:1,offset:1}} md={{span:1,offset:1}}  sm={{span:1,offset:3}} xs={{span:1,offset:3}} >:</Col>
+                                        <Col  lg={{span:14 ,offset:1}} md={{span:4,offset:1}}  sm={{span:13,offset:1}} xs={{span:13,offset:1}}><Description>{data.value}</Description></Col>
                                    </ListRowWrapper>
                                   )
                             })
@@ -57,6 +58,7 @@ const ListRowWrapper = styled(Row)`
        padding-bottom: 10px;
 `
 
+
 const AboutUsWrapper = styled(Content)`
        color: #ffffff;
 `
@@ -68,18 +70,36 @@ const ColWrapper1Inner  = styled.div`
          position: relative;
          background-color: #24aa3d9c;
          padding: 70px 25px;
+         @media(max-width:576px){
+            padding: 20px 10px;
+        }
 `
 const ColWrapper2  = styled(Col)`
          position: relative;
          background-image: url(${TinguBoy});
+         @media(max-width:576px){
+             display: none;
+        }
+`
+
+const Title = styled.span`
+       font-size: 17px;
+`
+
+const Description = styled.span`
+      font-size: 18px;
 `
 
 const Heading = styled.h3`
           color: #ffffff;
           margin-bottom: 25px;
           font-weight: 700;
-          font-size: 30px;
+          font-size: 45px;
           margin-left:12%;
+          @media(max-width:576px){
+            font-size: 25px;
+            margin-left:3%;
+        }
 `
 
 export default AboutUs
