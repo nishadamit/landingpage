@@ -148,7 +148,7 @@ const ContactUs = () =>{
 }
 const FormRowWrapper = styled(Row)`
           /* margin-top: 50px; */
-          background-color:  #0000003d;
+          background-color:  #23232387;
           color: #ffffff;
           padding: 100px 0px 50px 0px;
           @media(max-width:576px){
@@ -156,7 +156,6 @@ const FormRowWrapper = styled(Row)`
        }
 `
 const FormRowWrapper2 = styled.div`
-          background-color:  #1e2841;
           background-image: url(${BlurredImage});
           background-size: cover;
 `

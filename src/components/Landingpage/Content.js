@@ -30,7 +30,7 @@ const LandingPageContent = () =>{
                                     <div>
                                           <Heading>Virtual Currency on</Heading>
                                           <div>
-                                                <ImageStyle src={kaigen} width='200px' />
+                                          <Heading2>Kaigen</Heading2> 
                                           </div>
                                           <div>
                                                 <a  href={() => false} ><ImageStyle src={GooglePlay} width='160px' /></a>
@@ -99,6 +99,12 @@ const Heading = styled.h1`
           font-size: 20px;
           font-weight: 400;
           color: #ffffff;
+`
+const Heading2 = styled.h1`
+      font-size: 68px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      line-height: 0.662;
 `
 const BackgroundOverlay = styled(Row)`
         width: 100%;

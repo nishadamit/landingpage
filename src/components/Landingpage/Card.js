@@ -21,8 +21,8 @@ export const Card =(props) =>{
 }
 
 const CardContainer = styled.div`
-      width: "100%";
-      height: 400px;
+      width: 100%;
+      height: 100%;
       background-color: #ffffff;
       @media(max-width:576px){
             margin-top: 20px;
