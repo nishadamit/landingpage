@@ -65,6 +65,7 @@ const AboutUsWrapper = styled(Content)`
 const ColWrapper1  = styled(Col)`
          position: relative;
          background-image: url(${greemImage});
+         background-size: cover;
 `
 const ColWrapper1Inner  = styled.div`
          position: relative;
@@ -95,7 +96,7 @@ const Heading = styled.h3`
           margin-bottom: 25px;
           font-weight: 700;
           font-size: 45px;
-          margin-left:12%;
+          margin-left:8%;
           @media(max-width:576px){
             font-size: 25px;
             margin-left:3%;

@@ -50,7 +50,7 @@ const OurTeam = () =>{
                             {TeamData.map((data) => <OurTeamCard details={data} key={data.name}/>)}
                         </Row>
                 </Col>
-                <Col2 lg={{offset:2,span:12}}>
+                <Col2 lg={{offset:2,span:13}}>
                              <Row>
                                  <ColWrapper2 lg={{span:24}}  sm={{span:24}} xs={{span:24}} >
                                  {/* <Heading>Message from CEO</Heading> */}
@@ -98,8 +98,6 @@ const ColWrapper3  = styled(Col)`
 `
 const OurTeamHeading = styled.h1`
          color: #1e2841;
-         text-align: center;
-         left: 10%;
          background-color: #ffffff;
          padding: 0px 10px;
          margin: 0px;

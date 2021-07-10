@@ -11,7 +11,6 @@ export const Card =(props) =>{
                   <ImageBox 
                         source={props.source}
                         WIDTH="100%"
-                        HEIGHT="150px"
                   />
                   <ContentWrapper>
                     <Heading>{props.Heading}</Heading>

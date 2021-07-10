@@ -23,46 +23,38 @@ const ContactUs = () =>{
           <Content data-aos="fade-up" >
               <FormRowWrapper2>
                   <FormRowWrapper>
-                    <Col lg={{span:9,offset:3}} sm={{span: 24}} xs={{span: 24}} >
+                    <Col lg={{span:10,offset:2}} sm={{span: 24}} xs={{span: 24}} >
                                 <Heading3>Keep in touch with us</Heading3>
                         <Form  name="nest-messages">
                             <Row>
-                                <Col lg={{span:11,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
+                                <Col lg={{span:12,offset:0}} md={{span:11}} sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
                                     <Form.Item 
                                         name="firstname" 
                                         rules={[{ required: true, message: 'Please input your Name!' }]}
                                     >
-                                        <Input
-                                            placeholder="First Name"
-                                        />
+                                        <InputBox  />
                                     </Form.Item>
                                 </Col>
-                                <Col lg={{span:11,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
+                                <Col lg={{span:11,offset:1}} md={{span:11,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                                     <Form.Item 
                                       name="lastname" 
                                     >
-                                        <Input
-                                            placeholder="Last Name"
-                                        />
+                                        <InputBox  />
                                     </Form.Item>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col lg={{span:11,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
+                                <Col lg={{span:12,offset:0}} md={{span:11}} sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
                                     <Form.Item 
                                        name="email"  
                                        rules={[{ required: true, message: 'Please input your email!' }]}
                                     >
-                                        <Input
-                                            placeholder="Email"
-                                        />
+                                        <InputBox />
                                     </Form.Item>
                                 </Col>
-                                <Col lg={{span:11,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
+                                <Col lg={{span:11,offset:1}} md={{span:11,offset:1}}  sm={{span:22,offset:1}} xs={{span:22,offset:1}} >
                                     <Form.Item name="phonenumber">
-                                        <Input
-                                            placeholder="Phone Number"
-                                        />
+                                        <InputBox />
                                     </Form.Item>
                                 </Col>
                             </Row>
@@ -78,14 +70,12 @@ const ContactUs = () =>{
                                 </Col>
                             </Row> */}
                             <Row>
-                                <Col lg={{span:23,offset:1}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
+                                <Col lg={{span:24,offset:0}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}  >
                                     <Form.Item 
                                        name="message"
                                        rules={[{ required: true, message: 'Please type your message!' }]}
                                     >
-                                        <Input.TextArea
-                                            placeholder="Message"
-                                        />
+                                        <InputTextArea  />
                                     </Form.Item>
                                 </Col>
                             </Row>
@@ -125,15 +115,20 @@ const ContactUs = () =>{
                     </Col>
                     <Col lg={{span:8 ,offset:1}}  sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
                         <Heading3>Contact Details</Heading3>
+                        <Heading4>Corporate Offices:</Heading4>
+                        <FlagContainer>
+                               <Flags.JP title="United States" style={{width:"20px"}}/>  <Heading5 marginLeft = "16px">JAPAN</Heading5>
+                        </FlagContainer>
                         <List>
-                            <li><Heading4>Corporate Offices:</Heading4></li>
-                            <li><Flags.JP title="United States" style={{width:"20px"}}/> <Heading5>JAPAN</Heading5></li>
                             <li> <span>105-0023</span></li>
                             <li> <span>1-2-2 Seavans A Mall, 2F, Mandir,</span></li>
                             <li> <span>Shibaura Minato-ku, Tokyo</span></li>
                             <li> <span>Phone - +81 70-1481-9881</span></li>
-                            <br />
-                            <li><Flags.IN title="United States" style={{width:"20px"}}/>  <Heading5>INDIA</Heading5></li>
+                        </List>
+                        <FlagContainer>
+                               <Flags.IN title="United States" style={{width:"20px"}}/>  <Heading5 marginLeft= "16px">INDIA</Heading5>
+                        </FlagContainer>
+                        <List>
                             <li> <span>Unit-4, Madhuban Complex, Lane No-5, Above</span></li>
                             <li> <span>Canara Bank, Koregaon Park Pune 411001,</span></li>
                             <li> <span>Maharashtra, India</span></li>
@@ -144,7 +139,6 @@ const ContactUs = () =>{
                             <li> <span>sales@kaigengroup.com</span></li>
                             {/* <Map /> */}
                         </List>
-                       
                     </Col>
                     </FormRowWrapper>
               </FormRowWrapper2>
@@ -164,6 +158,7 @@ const FormRowWrapper = styled(Row)`
 const FormRowWrapper2 = styled.div`
           background-color:  #1e2841;
           background-image: url(${BlurredImage});
+          background-size: cover;
 `
 const Heading3 = styled.h1`
           color: #ffffff;
@@ -180,7 +175,7 @@ const Heading5 = styled.h1`
           color: #ffffff;
           font-size: 17px;
           margin-bottom: 0px;
-          margin-left: 5px;
+          margin-left: ${props =>(props.marginLeft ? props.marginLeft : "0px")};
 `
 const List = styled.ul`
        li{
@@ -193,10 +188,28 @@ const List = styled.ul`
        }
 `
 
+const InputBox = styled(Input)`
+         background-color: transparent;
+         outline: none;
+         height: 40px;
+` 
+const InputTextArea = styled(Input.TextArea)`
+         background-color: transparent;
+         outline: none;
+         height: 125px !important;
+` 
+
 const StyledCheckbox = styled(Checkbox)`
         color: #ffffff;
+`
+
+const FlagContainer = styled.div`
+     display: flex;
 `
 
 
 
 export default ContactUs
+
+{/* <Flags.JP title="United States" style={{width:"20px"}}/> */}
+{/* <Flags.IN title="United States" style={{width:"20px"}}/> */}
