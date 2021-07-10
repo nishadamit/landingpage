@@ -89,6 +89,7 @@ const MainRowWrapper = styled(Row)`
 const Col2  = styled(Col)`
        background-color: #F76943;
        margin-top: 81px;
+       padding-bottom: 40px;
 `
 const ColWrapper2  = styled(Col)`
          text-align: center;
