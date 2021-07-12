@@ -42,7 +42,8 @@ const Title =styled.h2`
 ` 
 
 const CardContainer = styled.div`
-          margin-left: 20px;
+          margin-left: 10px;
+          flex-basis: 53%;
 `
 
 const ImageContainer = styled.div`
