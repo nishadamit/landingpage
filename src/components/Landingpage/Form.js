@@ -1,11 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Form,Col,Input} from 'antd';
 import { StyledButton } from './Button';
 import { InputBox } from './Input';
 
 const LandingForm = () =>{
         return(
-            <Col span={22} offset={1}>
+            <ColWrapper span={22} offset={1}>
+                <FormHeading>Individual Account</FormHeading>
                     <Form
                             name="normal_login"
                             className="login-form"
@@ -30,8 +32,17 @@ const LandingForm = () =>{
                                 </StyledButton>
                             </Form.Item>
                     </Form>
-            </Col>
+            </ColWrapper>
         )
 }
+
+const ColWrapper = styled(Col)`
+       background-color: #ffffff;
+       padding: 10px 30px;
+`
+
+const FormHeading = styled.h1`
+        color: #322b2b;
+`
 
 export default LandingForm

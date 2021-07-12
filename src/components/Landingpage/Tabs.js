@@ -13,9 +13,9 @@ const LandingTabs = () =>{
                 <TabPane tab=" Individual Account " key="1">
                     <LandingForm/>
                 </TabPane>
-                <TabPane tab=" Carporate Account " key="2">
+                {/* <TabPane tab=" Carporate Account " key="2">
                     <LandingForm />
-                </TabPane>
+                </TabPane> */}
             </StyledTabs>
        )
 }

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import LandingHeader from './Header';
 import { Card } from './Card';
 import BackgroundImage from '../../assests/images/mainbackground.jpg';
-import kaigen from '../../assests/images/kaigen.png'
 import GooglePlay from '../../assests/images/googleplay.png';
 import AppStore from '../../assests/images/appstore.png';
 import CardImg1 from '../../assests/images/card-img1.png';
@@ -12,20 +11,22 @@ import CardImg2 from '../../assests/images/card-img2.png';
 import CardImg3 from '../../assests/images/card-img3.png';
 import LandingTabs from './Tabs';
 import ImageCrousel from './Crousel';
+import LoginForm from './Form';
 const {   Content, } = Layout;
 
 
 const LandingPageContent = () =>{
       return(
           <Content>
-                <ContentRow color="#1e2841" padding="55px">
+                <ContentRow  color="#1e2841" padding="55px">
                    <ImageCrousel />
                    <BackgroundOverlay>
                               <LandingHeader />
-                              <Col lg={{span:7,offset:3}} md={{span:9,offset:2}} sm={{span:22}} xs={{span:22,offset:1}}>
-                                    <LandingTabs/>
+                              <Col lg={{span:8,offset:3}} md={{span:9,offset:2}} sm={{span:22,offset:1}} xs={{span:22,offset:1}}>
+                                    {/* <LandingTabs/> */}
+                                    <LoginForm />
                               </Col>
-                              <Col lg={{offset:6,span:8}}  md={{span:12,offset:1}} sm={{span:20,offset:2}} xs={{span:20,offset:2}}>
+                              <Col lg={{offset:6,span:7}}  md={{span:12,offset:1}} sm={{span:20,offset:2}} xs={{span:20,offset:2}}>
                                     <Header2right >
                                     <div>
                                           <Heading>Virtual Currency on</Heading>
@@ -77,8 +78,8 @@ const ContentRow = styled(Row)`
         background-repeat: no-repeat; */
         height: 100vh;
         /* background-position: center;
-        background-size: cover;
-        background-color: #000000; */
+        background-size: cover;*/
+        background-color: #ffffff; 
  `
  const ContentRow2 = styled(Row)`
         padding: 70px 0px;
