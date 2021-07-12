@@ -69,7 +69,8 @@ const ColWrapper1  = styled(Col)`
 `
 const ColWrapper1Inner  = styled.div`
          position: relative;
-         background-color: #24aa3d9c;
+         /* background-color: #24aa3d9c; */
+         background-color: #1e2842bf;
          padding: 70px 25px;
          @media(max-width:576px){
             padding: 20px 10px;

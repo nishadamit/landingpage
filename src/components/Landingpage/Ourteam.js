@@ -43,7 +43,7 @@ const OurTeam = () =>{
       }, []);
 
     return(
-            <MainRowWrapper  data-aos="fade-up">
+            <MainRowWrapper id="ourteam"  data-aos="fade-up">
                 <Col lg={{offset:2,span:7}}>
                         <OurTeamHeading>Our Team</OurTeamHeading>
                         <Row justify="space-around">
@@ -87,7 +87,8 @@ const MainRowWrapper = styled(Row)`
        }
 `
 const Col2  = styled(Col)`
-       background-color: #F76943;
+       /* background-color: #F76943; */
+       background-color: #1e2841;
        margin-top: 81px;
        padding-bottom: 40px;
 `

@@ -20,7 +20,7 @@ const ContactUs = () =>{
       }, []);
 
       return(
-          <Content data-aos="fade-up" >
+          <Content id="contactus" data-aos="fade-up" >
               <FormRowWrapper2>
                   <FormRowWrapper>
                     <Col lg={{span:10,offset:2}} sm={{span: 24}} xs={{span: 24}} >

@@ -21,7 +21,7 @@ const LandingPageFooter = ({setFaqModal,setTermModal,setPrivacyModal,setSupportM
                     <Col lg={{span:10,offset:2}} sm={{span:24}} xs={{span:24}}>
                        <ListStyle>
                             <a  href={() => false}  onClick={() =>setSupportModal(true)}><li>Support</li></a>
-                            <a  href={() => false}  onClick={() =>setTermModal(true)}><li>Terms And Condition</li></a>
+                            <a  href={() => false}  onClick={() =>setTermModal(true)}><li>Terms & Condition</li></a>
                             <a  href={() => false}  onClick={() =>setPrivacyModal(true)}><li>Privacy Policy</li></a>
                             <a  href={() => false}  onClick={() =>setFaqModal(true)} ><li >FAQs</li></a>
                         </ListStyle>
@@ -46,6 +46,7 @@ const LandingPageFooter = ({setFaqModal,setTermModal,setPrivacyModal,setSupportM
 const StyledFooter = styled(Footer)`
         text-align: center;
         background-color: #F76943;
+        background-color: #1e2841;
         color: #ffffff;
         @media(max-width:576px){
             padding: 0px;
