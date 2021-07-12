@@ -6,7 +6,7 @@ import { InputBox } from './Input';
 
 const LandingForm = () =>{
         return(
-            <ColWrapper span={22} offset={1}>
+            <ColWrapper>
                 <FormHeading>Individual Account</FormHeading>
                     <Form
                             name="normal_login"
@@ -36,7 +36,7 @@ const LandingForm = () =>{
         )
 }
 
-const ColWrapper = styled(Col)`
+const ColWrapper = styled.div`
        background-color: #ffffff;
        padding: 10px 30px;
 `
